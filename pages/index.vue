@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">blog</h1>
+      <h1 class="title">MCLearning Lab!</h1>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
