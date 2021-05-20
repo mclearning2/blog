@@ -1,0 +1,50 @@
+.main-header {
+  display: flex;
+  align-items: center;
+  height: $header-height;
+  padding: 0 2rem;
+  background-color: $header-bg-color;
+  color: $header-color;
+  font-size: $header-font-size;
+
+  &__logo {
+    height: 60%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+  }
+
+  &__title {
+    margin-left: 2rem;
+    font-weight: bold;
+    padding-right: 3rem;
+  }
+
+  &__category {
+    display: flex;
+
+    &-item {
+      margin-right: 3rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__icon {
+    display: flex;
+    margin-left: auto;
+    &-item {
+      margin-left: 1.5rem;
+      opacity: 0.6;
+      img {
+        height: calc(#{$header-height / 2});
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
