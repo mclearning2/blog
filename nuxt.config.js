@@ -1,3 +1,4 @@
+import { sortRoutes } from '@nuxt/utils';
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -5,11 +6,17 @@ export default {
   // github으로 배포하는 경우 base 수정 필요
   router: {
     base: '/blog/',
+    extendRoutes(routes, resolve) {
+      // Add some routes here ...
+
+      // and then sort them
+      sortRoutes(routes);
+    },
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'blog',
+    title: `MCLearning's study life`,
     htmlAttrs: {
       lang: 'en',
     },
@@ -68,4 +75,4 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-}
+};

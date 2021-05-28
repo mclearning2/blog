@@ -1,3 +1,10 @@
+@import '~assets/scss/base.scss';
+
 @import '~assets/scss/layouts/header.scss';
 @import '~assets/scss/layouts/background.scss';
-@import '~assets/scss/layouts/sidebar.scss';
+@import '~assets/scss/layouts/dock.scss';
+
+@import '~assets/scss/layouts/folder_window.scss';
+@import '~assets/scss/layouts/folder_window/navigation.scss';
+@import '~assets/scss/layouts/folder_window/header.scss';
+@import '~assets/scss/layouts/folder_window/body.scss';

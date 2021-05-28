@@ -1,9 +1,38 @@
 // Color
-$header-bg-color: #212121;
-$header-color: #efefef;
+$color1: #1e1e1e;
+$color2: #202020;
+$color3: #262626;
+$color4: #383838;
+$color5: #555555;
+$color6: #656565;
+$color7: #aeaeae;
+$color8: #ecebec;
+
+$header-bg-color: $color2;
+$header-color: $color8;
+
+$dock-color: $color8;
+$dock-bg-color: $color2;
+$dock-border-color: $color8;
+$dock-name-bg-color: $color4;
+$dock-name-border-color: $color5;
+
+$folder-nav-bg-color: $color4;
+$folder-nav-color: white;
+$folder-header-bg-color: $color3;
+$folder-body-bg-color: $color2;
+
+$folder-border-color: $color5;
 
 // Layout
 $header-height: 4rem;
+$dock-width: 4rem;
+$folder-nav-width: 18rem;
+$folder-header-width: 7rem;
 
 // font-size
 $header-font-size: 1.3rem;
+
+:export {
+  dockWidth: $dock-width;
+}

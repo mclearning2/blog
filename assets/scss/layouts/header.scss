@@ -1,11 +1,13 @@
 .main-header {
   display: flex;
+  position: relative;
   align-items: center;
   height: $header-height;
   padding: 0 2rem;
   background-color: $header-bg-color;
   color: $header-color;
   font-size: $header-font-size;
+  z-index: 10000;
 
   &__logo {
     height: 60%;

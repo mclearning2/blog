@@ -6,11 +6,7 @@
       alt="main-header__logo"
     />
     <div class="main-header__title">MCLearning's Study Life</div>
-    <ul class="main-header__category">
-      <li class="main-header__category-item">Web study</li>
-      <li class="main-header__category-item">Life</li>
-      <li class="main-header__category-item">삶에 대한 질문</li>
-    </ul>
+    <div class="main-header__content-title">글 제목</div>
     <ul class="main-header__icon">
       <li class="main-header__icon-item">
         <a href="">
