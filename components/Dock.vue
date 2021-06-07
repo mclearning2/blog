@@ -8,7 +8,7 @@
       <NuxtLink :to="item.path" class="main-dock-link">
         <img
           class="main-dock__icon"
-          :src="require(`~/assets/images/dock/${item.name}.png`)"
+          :src="loadDockImage(item.name)"
           alt="dockIcon"
           @mouseenter.self="$set(dockFlag, idx, true)"
           @mouseleave.self="$set(dockFlag, idx, false)"
@@ -61,6 +61,18 @@ export default {
     );
   },
   methods: {
+    loadDockImage(name) {
+      let img = null;
+      try {
+        img = require(`~/assets/images/dock/${name}.png`);
+      } catch (error) {
+        console.log(error);
+        console.log(`Can't load '${name}.png'. Change to default image`);
+        img = require(`~/assets/images/dock/dock_default.png`);
+      }
+
+      return img;
+    },
     dockOff() {
       window.cancelAnimationFrame(this.dockRequestId);
       this.dockRequestId = undefined;

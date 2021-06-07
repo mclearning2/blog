@@ -1,11 +1,9 @@
 <template>
-  <div>study</div>
+  <div id="history"></div>
 </template>
 
 <script>
 export default {
-  layout: 'FolderWindow',
+  name: 'History',
 };
 </script>
-
-<style></style>
