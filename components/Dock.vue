@@ -50,7 +50,14 @@ export default {
     },
   },
   created() {
-    this.dockItems = this.$router.options.routes;
+    const items = [];
+    for (const route of this.$router.options.routes) {
+      if (route.path.split('/').length === 2) {
+        items.push(route);
+      }
+    }
+
+    this.dockItems = items;
     this.dockFlag = Array.from(
       { length: this.dockItems.length },
       (i) => (i = false)

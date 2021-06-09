@@ -8,6 +8,14 @@ export default {
     base: '/',
     extendRoutes(routes, resolve) {
       // Add some routes here ...
+      for (const route of routes) {
+        const p = route.path;
+        if (p === '/notice') {
+          route.name = '공지사항';
+        } else if (p === '/history') {
+          route.name = '블로그 역사';
+        }
+      }
 
       // and then sort them
       sortRoutes(routes);
@@ -23,7 +31,32 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Iron min의 블로그입니다. 프론트엔드, 자기개발, 일상 등 일상의 기록들을 남기는 곳입니다.',
+      },
+      {
+        name: 'og:site_name',
+        content: 'Iron min Blog',
+      },
+      {
+        name: 'og:title',
+        content: 'Iron min Blog',
+      },
+      {
+        name: 'og:keywords',
+        content: 'Blog main',
+      },
+      {
+        name: 'og:image',
+        content: 'assets/images/logo.png',
+      },
+      {
+        name: 'og:author',
+        content: 'Iron min',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

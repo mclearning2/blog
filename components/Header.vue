@@ -2,7 +2,7 @@
   <header class="main-header">
     <img
       class="main-header__logo"
-      src="~assets/images/header/header-logo.png"
+      src="~assets/images/logo.png"
       alt="main-header__logo"
     />
     <div class="main-header__title">{{ title }}</div>

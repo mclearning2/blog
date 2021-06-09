@@ -40,6 +40,7 @@
     border: 1px solid $dock-name-border-color;
     box-shadow: 0 0 0 1px black;
     display: none;
+    white-space: nowrap;
 
     &.active {
       display: block;
