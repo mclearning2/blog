@@ -3,7 +3,9 @@
     <div class="folder-window">
       <FolderWindowNavigation></FolderWindowNavigation>
       <FolderWindowHeader></FolderWindowHeader>
-      <FolderWindowBody> <Nuxt /> </FolderWindowBody>
+      <div class="folder-body">
+        <Nuxt />
+      </div>
     </div>
   </Default>
 </template>

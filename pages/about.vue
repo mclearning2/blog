@@ -7,5 +7,3 @@ export default {
   layout: 'FolderWindow',
 };
 </script>
-
-<style></style>
