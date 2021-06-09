@@ -66,8 +66,6 @@ export default {
       try {
         img = require(`~/assets/images/dock/${name}.png`);
       } catch (error) {
-        console.log(error);
-        console.log(`Can't load '${name}.png'. Change to default image`);
         img = require(`~/assets/images/dock/dock_default.png`);
       }
 

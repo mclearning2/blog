@@ -5,7 +5,7 @@ export default {
 
   // github으로 배포하는 경우 base 수정 필요
   router: {
-    base: '/blog/',
+    base: '/',
     extendRoutes(routes, resolve) {
       // Add some routes here ...
 
@@ -16,7 +16,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: `MCLearning's study life`,
+    title: `IronMin Blog`,
     htmlAttrs: {
       lang: 'en',
     },

@@ -35,18 +35,22 @@
     }
   }
 
-  &__icon {
+  .right-section {
     display: flex;
     margin-left: auto;
-    &-item {
-      margin-left: 1.5rem;
-      opacity: 0.6;
+    &__item {
+      display: flex;
+      align-items: center;
+      margin-right: 1.5rem;
       img {
         height: calc(#{$header-height / 2});
       }
-      &:first-child {
-        margin-left: 0;
+
+      &.clock {
+        margin-right: 0;
+        opacity: 1;
       }
     }
   }
+
 }
