@@ -12,7 +12,11 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:nuxt/recommended',
   ],
-  plugins: [],
+  plugins: ['html', 'standard', 'vue'],
   // add your custom rules here
-  rules: {},
-}
+  rules: {
+    'vue/no-v-html': 0,
+    'vue/no-undef': 0,
+    'vue/no-unused-vars': 0,
+  },
+};
