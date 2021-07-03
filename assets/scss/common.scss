@@ -1,8 +1,11 @@
-@import 'base';
+@import 'base/font.scss';
+
+@import 'base.scss';
 
 @import 'layout/dock.scss';
-@import 'layout/post.scss';
+@import 'layout/header.scss';
+@import 'layout/footer.scss';
 
-@import 'plugin/tooltip.scss';
-
-
+@import 'page/main';
+@import 'page/post_list';
+@import 'page/post';

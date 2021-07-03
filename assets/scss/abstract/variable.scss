@@ -1,25 +1,21 @@
 // Color
-
-$color1: #202123;
-$color2: #2C2D31;
-$color3: #36373A;
-$color4: #555555;
-$color5: #656565;
-$color6: #bbbbbb;
-$color7: #ecebec;
-
-$key-color: #008bff;
+$color1: #0e7677;
+$color2: #9a4545;
+$color3: #9d9d9d;
+$color4: #eaeaea;
+$color5: #5a5a5a;
 
 // Layout
-$header-height: 3rem;
 $dock-width: 4rem;
 $dock-section-width: 5rem;
 $dock-margin-left: 1rem;
 
-$post-hero-height: 550px;
-$post-width: 700px;
-
 $post-font-size: 1.6rem;
+$footer-height: 100px;
+
+// breakpoint
+$breakpoint-desktop: 1024px;
+$breakpoint-tablet: 768px;
 
 :export {
   dockWidth: $dock-width;

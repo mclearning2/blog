@@ -6,6 +6,7 @@ export default {
   router: {
     extendRoutes(routes, resolve) {
       const path = {
+        '/': 'Home',
         '/notice': '공지사항',
         '/vuejs': 'VueJS 정리노트',
         '/stackoverflow': '나만의 스택오버플로우',
@@ -64,12 +65,11 @@ export default {
   css: [
     '~/assets/scss/reset.scss',
     '~/assets/scss/normalize.scss',
-    '~/assets/scss/base.scss',
     '~/assets/scss/common.scss',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/async_data.js', '~/plugins/tooltip.js'],
+  plugins: ['~/plugins/async_data.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

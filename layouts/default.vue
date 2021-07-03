@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <layout-header />
-    <div class="container">
-      <layout-dock />
+    <layout-dock />
+    <div class="site-content">
       <nuxt v-if="!$slots.default" />
       <slot />
     </div>
