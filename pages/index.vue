@@ -1,6 +1,7 @@
 <template>
   <div class="site-main">
     <layout-dock />
+    <layout-mobile-nav />
     <img
       src="~/assets/images/common/logo.png"
       alt="cover-image"
