@@ -1,0 +1,59 @@
+.site-footer {
+  height: $footer-height;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  .designed-by {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    position: relative;
+
+    .host {
+      color: $color2;
+      font-weight: bold;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -3rem;
+      left: 50%;
+      transform:translateX(-50%);
+      width: 50%;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.2);
+
+    }
+  }
+
+  .sns {
+    display: flex;
+
+    &__item {
+      margin-right: 1.5rem;
+      filter: opacity(0.5) brightness(0);
+      transition: filter 0.1s, transform 0.6s;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        filter: brightness(1);
+        transform: translateY(-4px);
+
+      }
+
+      img {
+        width: 26px;
+        height: 26px;
+        object-fit: contain;
+      }
+
+    }
+  }
+}
