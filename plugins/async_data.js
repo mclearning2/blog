@@ -16,7 +16,7 @@ function dateFmt(date) {
 export default ({ app }, inject) => {
   const fetchPostItem = async function (ctx, dir, slug) {
     const post = await ctx
-      .$content(dir, slug)
+      .$content(dir, slug, { deep: true })
       .fetch()
       .catch(() => {
         ctx.$store.router.push('/error');

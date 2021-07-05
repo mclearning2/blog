@@ -95,6 +95,8 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    // https://sitemap.nuxtjs.org/guide/setup
+    '@nuxtjs/sitemap',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -111,4 +113,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // Sitemap Configuration: https://sitemap.nuxtjs.org/usage/sitemap
+  sitemap: {
+    hostname: 'https://mclearning-blog.com',
+    gzip: true,
+    generate: false,
+  },
 };
