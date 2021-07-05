@@ -37,6 +37,10 @@ export default {
         content:
           'Iron min의 블로그입니다. 프론트엔드, 자기개발, 일상 등 일상의 기록들을 남기는 곳입니다.',
       },
+      {
+        name: 'google-site-verification',
+        content: 'YNvjD0t84idJqnnSOnDFSdGUWVtfSfeh8rg4_Hwnqro',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
