@@ -1,5 +1,5 @@
 <template>
-  <page-post :post="post"></page-post>
+  <page-post :doc="post"></page-post>
 </template>
 
 <script>
@@ -10,7 +10,6 @@ export default {
     const slug = ctx.route.params.slug;
 
     const post = await ctx.$fetchPostItem(ctx, dir, slug);
-    console.log(post);
 
     return { post };
   },
