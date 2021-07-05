@@ -1,9 +1,5 @@
 <template>
-  <page-post
-    :post="post"
-    :prev-post="prevPost"
-    :next-post="nextPost"
-  ></page-post>
+  <page-post :post="post"></page-post>
 </template>
 
 <script>
@@ -14,9 +10,9 @@ export default {
     const slug = ctx.route.params.slug;
 
     const post = await ctx.$fetchPostItem(ctx, dir, slug);
-    const [prevPost, nextPost] = await ctx.$fetchRecentPostList(ctx, dir, slug);
+    console.log(post);
 
-    return { post, prevPost, nextPost };
+    return { post };
   },
 };
 </script>
