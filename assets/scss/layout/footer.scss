@@ -36,7 +36,7 @@
     &__item {
       margin-right: 1.5rem;
       filter: opacity(0.5) brightness(0);
-      transition: filter 0.1s, transform 0.6s;
+      transition: filter 0.1s, margin 0.3s;
 
       &:last-child {
         margin-right: 0;
@@ -44,8 +44,7 @@
 
       &:hover {
         filter: brightness(1);
-        transform: translateY(-4px);
-
+        margin-top: -5px;
       }
 
       img {

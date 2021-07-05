@@ -1,22 +1,20 @@
 <template>
-  <div id="app">
+  <Base>
     <layout-header />
     <layout-dock />
     <layout-mobile-nav />
     <div class="site-content">
       <nuxt v-if="!$slots.default" />
-      <slot />
     </div>
     <layout-footer />
-  </div>
+  </Base>
 </template>
 
 <script>
+import Base from '~/layouts/base.vue';
 export default {
-  created() {
-    this.$store.commit('setRouteNames', this.$router.options.routes);
-    this.$store.commit('setDockItems');
-    this.$store.commit('setDockItems');
+  components: {
+    Base,
   },
 };
 </script>

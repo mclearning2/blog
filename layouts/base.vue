@@ -1,5 +1,8 @@
 <template>
-  <nuxt />
+  <div id="app">
+    <nuxt v-if="!$slots.default" />
+    <slot></slot>
+  </div>
 </template>
 
 <script>
