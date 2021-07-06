@@ -5,6 +5,7 @@
       <h4 class="post-item__date">{{ doc.createdAt }}</h4>
     </div>
     <h1 class="post-item__title">{{ doc.title }}</h1>
+    <img class="post-item__image" :src="doc.image" alt="cover-image" />
 
     <nuxt-content class="post-item__body" :document="doc"></nuxt-content>
   </article>

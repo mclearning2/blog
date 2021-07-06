@@ -30,6 +30,11 @@
     color: black;
   }
 
+  &__image {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
   &__body {
     width: 100%;
     color: rgba(0, 0, 0, 0.7);
