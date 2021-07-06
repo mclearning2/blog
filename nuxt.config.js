@@ -35,7 +35,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          '열심히 사는 걸 좋아하고 돈 많이 벌고 싶은 프론트엔드 개발자입니다. 주로 블로그를 꾸미기 위한 기술과 방법들을 정리할 것이며, 그 외에도 부업, 운동, 일상들도 적는 일기장처럼 사용할 예정입니다.',
+          '열심히 사는 걸 좋아하고 돈 많이 벌고 싶은 프론트엔드 개발자입니다. 주로 블로그를 꾸미기 위한 기술과 방법들과 부업, 운동, 일상 등을 정리할 것입니다.',
       },
       {
         hid: 'og:type',
@@ -57,6 +57,10 @@ export default {
       {
         hid: 'og:url',
         content: 'https://mclearning-blog.com/',
+      },
+      {
+        name: 'naver-site-verification',
+        content: 'e097e79f184f62ccc4dc2aaaca50423f9779685e',
       },
       {
         name: 'google-site-verification',
