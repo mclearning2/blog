@@ -24,7 +24,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: `블로그 꾸미고 노는 남자`,
+    title: `블로그 꾸미고 노는 걸 좋아하는 프론트엔드 개발자`,
     htmlAttrs: {
       lang: 'ko',
     },
@@ -35,7 +35,28 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Iron min의 블로그입니다. 프론트엔드, 자기개발, 일상 등 일상의 기록들을 남기는 곳입니다.',
+          '열심히 사는 걸 좋아하고 돈 많이 벌고 싶은 프론트엔드 개발자입니다. 주로 블로그를 꾸미기 위한 기술과 방법들을 정리할 것이며, 그 외에도 부업, 운동, 일상들도 적는 일기장처럼 사용할 예정입니다.',
+      },
+      {
+        hid: 'og:type',
+        content: 'website',
+      },
+      {
+        hid: 'og:title',
+        content: "Welcome to MCLearning's blog",
+      },
+      {
+        hid: 'og:description',
+        content:
+          '열심히 사는 걸 좋아하고 돈 많이 벌고 싶은 프론트엔드 개발자입니다. 주로 블로그를 꾸미기 위한 기술과 방법들을 정리할 것이며, 그 외에도 부업, 운동, 일상들도 적는 일기장처럼 사용할 예정입니다.',
+      },
+      {
+        hid: 'og:image',
+        content: 'https://mclearning-blog.com/_nuxt/img/logo.3db2992.png',
+      },
+      {
+        hid: 'og:url',
+        content: 'https://mclearning-blog.com/',
       },
       {
         name: 'google-site-verification',
@@ -109,7 +130,7 @@ export default {
   content: {
     markdown: {
       prism: {
-        theme: '~/static/post/css/darcula.min.css',
+        theme: '~/static/archive/css/darcula.min.css',
       },
     },
   },

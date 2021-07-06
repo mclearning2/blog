@@ -18,6 +18,20 @@ export default {
       default: Object,
     },
   },
+  head() {
+    return {
+      title: this.doc.title,
+      meta: [
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        { hid: 'og:title', property: 'og:title', content: this.doc.title },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.doc.description,
+        },
+      ],
+    };
+  },
   computed: {
     category() {
       return this.$store.state.routeNames[this.doc.dir];

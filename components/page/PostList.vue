@@ -7,7 +7,7 @@
       </div>
       <div class="post-list__text">
         <h2 class="post-list__title">{{ p.title }}</h2>
-        <p class="post-list__summary">{{ p.summary }}</p>
+        <p class="post-list__summary">{{ p.description }}</p>
         <div class="post-list__info">
           <h3 class="post-list__category">{{ category(p.dir) }}</h3>
           <h4 class="post-list__date">{{ p.createdAt }}</h4>

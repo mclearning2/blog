@@ -1,7 +1,7 @@
 <template>
   <div class="site-main" :class="{ active: !loading }">
     <img
-      src="~/assets/images/common/logo.png"
+      src="~/static/logo.png"
       alt="cover-image"
       class="site-main__cover"
       @load="mainImgLoaded"

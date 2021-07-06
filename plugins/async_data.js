@@ -1,16 +1,22 @@
-function loadImage(path) {
-  let img = '';
-  try {
-    img = require(`~/static/post/cover_image/${path}`);
-  } catch {
-    img = require('~/assets/images/common/logo.png');
-  }
-  return img;
-}
-
 function dateFmt(date) {
   const d = new Date(date);
   return `${d.getFullYear()}. ${d.getMonth() + 1}. ${d.getDate()}`;
+}
+
+function setDescription(post) {
+  if (!post.body) {
+    return;
+  }
+  let desc = '';
+  for (const child of post.body.children) {
+    if (child.tag && child.tag === 'p') {
+      desc += child.children[0].value;
+    }
+    if (desc.length > 100) {
+      break;
+    }
+  }
+  post.description = desc;
 }
 
 export default ({ app }, inject) => {
@@ -22,8 +28,8 @@ export default ({ app }, inject) => {
         ctx.$store.router.push('/error');
       });
 
-    post.image = loadImage(dir + '/' + slug);
     post.createdAt = dateFmt(post.createdAt);
+    setDescription(post);
 
     return post;
   };
@@ -35,20 +41,10 @@ export default ({ app }, inject) => {
       .fetch();
 
     for (const p of postList) {
-      p.image = loadImage(p.image);
       p.createdAt = dateFmt(p.createdAt);
     }
     for (const p of postList) {
-      let summary = '';
-      for (const child of p.body.children) {
-        if (child.tag && child.tag === 'p') {
-          summary += child.children[0].value;
-        }
-        if (summary.length > 100) {
-          break;
-        }
-      }
-      p.summary = summary;
+      setDescription(p);
     }
     return postList;
   };
