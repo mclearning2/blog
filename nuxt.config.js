@@ -7,6 +7,7 @@ export default {
     extendRoutes(routes, resolve) {
       const path = {
         '/': 'Home',
+        '/html': 'HTML',
         '/notice': '공지사항',
         '/vuejs': 'VueJS 정리노트',
         '/stackoverflow': '나만의 스택오버플로우',

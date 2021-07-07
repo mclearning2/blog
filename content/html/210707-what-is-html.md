@@ -1,0 +1,78 @@
+---
+title: HTML 기본 문법 총정리
+image: /post/cover_image/210707-what-is-html.jpg
+---
+
+이 글에서는 HTML을 구현하는 데 필요한 것들을 짧고 굵게 요약했습니다. 
+대략적인 설명들만 넣을 것이며 필요한 내용은 링크를 통해 볼 수 있도록 작성하였습니다.
+
+## HTML 이란?
+
+HTML은 프로그래밍 언어가 아닌 **마크업 언어**입니다. 어떤 문서나 데이터가 있을 때 어디는 이미지이고
+어디는 글이며, 어디는 제목부분이다 표시를 할 수 있습니다. 그래서 같은 글이더라도 **태그**, **속성** 등을 사용하여 
+다르게 보일 수 있습니다.
+
+### 태그
+
+제목, 글, 이미지 등 표기를 하기 위해서 `태그(tag)`를 사용해야합니다. 예를 들어, "My cat is very grumpy"
+라는 글을 문단으로 표시하고 싶다면 다음과 같이 쓰면 됩니다.
+
+```html
+<p>My cat is very grumpy</p>
+```
+
+태그는 아주 간단한 구성으로 이루어져 있습니다. 
+
+- 요소 (Element)
+  - 열린 태그 (Opening tag)
+  - 닫힌 태그 (Closing tag)
+  - 내용 (Content)
+
+![img.png](/post/image/html/210707-what-is-html/img.png)
+
+가끔 태그 하나만(`<img />`) 사용하는 경우도 있지만 전체적으로 동일합니다. 어떤 구역(section) 내에 문단을 넣고
+해당 문단 속에 이미지를 넣고 싶다면 다음처럼 감싸주면 됩니다.
+
+```html
+<section>
+  <p>
+    <img />
+  </p>
+</section>
+```
+
+### 속성(Attribute)
+
+문단, 이미지 등 표시는 했는데, 다른 특징들을 가지게 하고 싶을 수 있습니다. 
+여기엔 태그의 **속성(attribute)**을 지정하여, 태그의 특징들을 만들 수 있습니다. 
+예를 들어 한 태그에는 고양이 이미지를, 다른 한 태그에는 강아지 이미지를 넣고싶다면 src라는 속성을 통해 지정할 수 있습니다.
+
+```html
+<img src="cat.jpg" />
+<img src="dog.jpg" />
+```
+
+태그마다 사용하는 속성도 다르고 공통적으로 쓰이는 속성들도 있기에, 기억해둬야할 것들이 좀 있지만, 자주 사용하는 것들이 정해져 있으니
+걱정하실 필요는 없습니다.
+
+## 태그 정리
+
+HTML 태그는 많아보이지만 실제 사용하는 것들은 정해져있고 그렇게 많은 것도 아닙니다. 자주 사용되는 태그들 순으로 나열해보겠습니다.
+
+
+![](../../static/post/image/html/210707-what-is-html/fb58ae29.png)
+![](/post/image/html/210707-what-is-html/fb58ae29.png)
+
+### html, head, body
+
+어떤 사이트든 이 3개의 태그는 필수적으로 들어있습니다.
+
+- `html`: 이 페이지 전체를 감싸는 태그로 HTML 페이지의 **root**를 의미합니다.
+- `head`: 페이지에 표시하진 않지만 필요한 추가 정보를 담습니다. (예. 페이지 제목, 페이지에 대한 설명 등)  
+- `body`: 
+
+
+
+## 참조 
+1. https://www.w3schools.com/html/default.asp
+2. https://developer.mozilla.org/ko/docs/Learn/Getting_started_with_the_web/HTML_basics
