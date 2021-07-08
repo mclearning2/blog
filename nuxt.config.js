@@ -9,9 +9,7 @@ export default {
         '/': 'Home',
         '/html': 'HTML',
         '/notice': '공지사항',
-        '/vuejs': 'VueJS 정리노트',
-        '/stackoverflow': '나만의 스택오버플로우',
-        // '/history': '블로그 배포 노트',
+        '/stackoverflow': '문제해결노트',
       };
 
       for (const route of routes) {
@@ -135,7 +133,7 @@ export default {
   content: {
     markdown: {
       prism: {
-        theme: '~/static/archive/css/darcula.min.css',
+        theme: false,
       },
     },
   },

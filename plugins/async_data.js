@@ -21,32 +21,37 @@ function setDescription(post) {
 
 export default ({ app }, inject) => {
   const fetchPostItem = async function (ctx, dir, slug) {
-    const post = await ctx
-      .$content(dir, slug, { deep: true })
-      .fetch()
-      .catch(() => {
-        ctx.$store.router.push('/error');
-      });
-
-    post.createdAt = dateFmt(post.createdAt);
-    setDescription(post);
-
-    return post;
+    try {
+      const post = await ctx
+        .$content(dir, slug, { deep: true })
+        .fetch()
+        .catch(() => {
+          ctx.$store.router.push('/error');
+        });
+      post.createdAt = dateFmt(post.createdAt);
+      setDescription(post);
+      return post;
+    } catch {
+      return {};
+    }
   };
 
   const fetchPostList = async function (ctx, dir) {
-    const postList = await ctx
-      .$content(dir, { deep: true })
-      .sortBy('createdAt')
-      .fetch();
-
-    for (const p of postList) {
-      p.createdAt = dateFmt(p.createdAt);
+    try {
+      const postList = await ctx
+        .$content(dir, { deep: true })
+        .sortBy('createdAt')
+        .fetch();
+      for (const p of postList) {
+        p.createdAt = dateFmt(p.createdAt);
+      }
+      for (const p of postList) {
+        setDescription(p);
+      }
+      return postList;
+    } catch {
+      return [];
     }
-    for (const p of postList) {
-      setDescription(p);
-    }
-    return postList;
   };
 
   const fetchRecentPostList = async function (
