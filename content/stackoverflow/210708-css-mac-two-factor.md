@@ -4,21 +4,22 @@ image: /images/210708-css-mac-sec-code/mac-two-factor-auth.png
 ---
 
 
-맥의 이중인증(two-factor authentication)에서 보이는 input에서 숫자 하나만 입력하면 바로 다음 input으로 이동합니다. input을 그냥 사용하면 글이 끝없이 나오고, 탭을 눌러야만 다음
-input으로 넘어갑니다. mac처럼 편한 input을 만드려면 어떻게 해야할까요??
+맥의 이중인증(two-factor authentication)에서 보면 한 칸에 하나의 숫자만 들어가고 바로 다음 칸으로 넘어가는데요. 
+HTML에서 사용하는 input을 이용하면 글자가 끝없이 나오고 tab을 눌러야만 다음 input으로 넘어가는데요. 
+과연 어떻게 구현해야할까요?
 
 ### 실행 목표 (입력해보세요)
 
-<cssMacTwoFactor></cssMacTwoFactor>
+<stackoverflow-css-mac-two-factor></stackoverflow-css-mac-two-factor>
 
 ## 설명
 
 ### 1. input을 감쌀 요소 추가
 
-key event를 등록하려면 input 마다 하는 것보다 **감싸는 요소를 두고 이벤트를 등록**하는 게 편합니다.
+우선 키 입력을 받아야하니 input에 대한 event를 등록해야합니다. 
+input마다 event를 등록하는 방법도 있지만 편의를 위해 **감싸는 요소를 두고 이벤트를 등록**하는 방법을 사용하겠습니다.
 
 ```html
-
 <div id="wrapper"> <!-- 감싸는 요소 -->
 </div>
 ```
@@ -51,9 +52,9 @@ input {
 
 ### 3. Javascript 이벤트 등록
 
-wrapper에 key event를 등록해줍니다. 지울
-때엔 [backspace를 사용할 것이기 때문에 onkeypress는 사용할 수 없습니다.](https://stackoverflow.com/questions/4843472/javascript-listener-keypress-doesnt-detect-backspace)
-그리고 해당 엘리멘트를 target으로 저장해두겠습니다.
+이제 wrapper에 key event를 등록합니다. 
+지울 때 [backspace를 사용하는데, onkeypress는 인식할 수 없습니다.](https://stackoverflow.com/questions/4843472/javascript-listener-keypress-doesnt-detect-backspace)
+그래서 대신 onkeydown의 함수를 변경하고 해당 엘리멘트를 target으로 저장해두겠습니다.
 
 ```javascript
 const i = document.getElementById('wrapper');
@@ -65,32 +66,33 @@ i.onkeydown = function(e) {
 
 ### 4. Key 입력과 maxlength에 따른 조건 추가
 
-이제 경우의 수를 생각해봅니다.
+이제 경우의 수를 생각해봅시다.
 
-- key 입력이 backspace인 경우
-  - 지울게 하나 남은 경우
-  - 더 이상 지울 게 없는 경우
-  - 그 외
-- key 입력이 backspace가 아닌 경우
-  - 입력이 적용되면 maxlength인 경우
-  - 입력하기도 전에 maxlength인 경우
-  - 그 외
+#### key 입력이 backspace인 경우
+- 지울게 하나 남은 경우
+- 더 이상 지울 게 없는 경우
+- 그 외
 
-그 외의 경우는 그냥 그대로 키입력이 적용되도록 놔두면 됩니다. 그럼 나머지 경우를 나타내볼까요
+#### key 입력이 backspace가 아닌 경우
+- 입력이 적용되면 maxlength인 경우
+- 입력하기도 전에 maxlength인 경우
+- 그 외
+
+그 외의 경우는 둘 다 그대로 키입력이 적용되도록 놔두면 됩니다. 그럼 나머지 경우를 나타내볼까요
 
 ```javascript
-// backspace를 누를 경우
+// backspace를 눌렀을 때
 if (e.key.toLowerCase() === 'backspace') {
-  // 아직 입력할 게 남은 경우
+  // 지울게 하나 남은 경우
   if (target.value.length === 1) {
   }
   // 더 이상 지울 것이 없는 경우 
   else if (target.value.length === 0) {
   }
 }
-// backspace외의 키를 누를 경우 입력해줍니다.
+// backspace 외 다른 키를 눌렀을 경우
 else {
-  // 입력이 적용되면 maxlength인 경우 (또한 들어오는 키 값의 길이는 1개 이하여야한다.)
+  // 입력이 적용되면 maxlength인 경우 (또한 들어오는 키 값의 길이는 1개 이하여야한다. home 같은 긴 이름 버튼 제외)
   if (target.value.length === maxlength - 1 && e.key.length <= 1) {
   }
   // 입력하기도 전에 maxlength인 경우

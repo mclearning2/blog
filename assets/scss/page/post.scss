@@ -65,6 +65,9 @@
     }
     h4 {
       font-size: 1.2em;
+      font-weight: 600;
+      color: #d44343;
+      margin-top: 3rem;
     }
 
     em {
@@ -173,8 +176,8 @@
     }
 
     pre {
-      margin: 0;
       border-radius: 5px;
+      margin: 30px auto;
       code {
         font-size: $post-font-size;
       }
