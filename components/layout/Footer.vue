@@ -35,7 +35,7 @@ export default {
           image: require('~/assets/images/footer/sns/twitter.png'),
         },
         instagram: {
-          link: 'https://www.instagram.com/mclearning2/',
+          link: 'https://www.instagram.com/mclearning_dev/',
           image: require('~/assets/images/footer/sns/instagram.png'),
         },
         github: {

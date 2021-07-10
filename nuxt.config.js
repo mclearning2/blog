@@ -31,14 +31,17 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        hid: 'description',
         name: 'description',
         content:
-          '열심히 사는 걸 좋아하고 돈 많이 벌고 싶은 프론트엔드 개발자입니다. 주로 블로그를 꾸미기 위한 기술과 방법들과 부업, 운동, 일상 등을 정리할 것입니다.',
+          '열심히 살면서 블로그 꾸미는 거 좋아하고 돈 많이 벌고 싶은 프론트엔드 개발자입니다.',
       },
       {
         hid: 'og:type',
         content: 'website',
+      },
+      {
+        hid: 'og:site_name',
+        content: "MCLearning's blog",
       },
       {
         hid: 'og:title',
@@ -47,7 +50,7 @@ export default {
       {
         hid: 'og:description',
         content:
-          '열심히 사는 걸 좋아하고 돈 많이 벌고 싶은 프론트엔드 개발자입니다. 주로 블로그를 꾸미기 위한 기술과 방법들과 부업, 운동, 일상 등을 정리할 것입니다.',
+          '열심히 살면서 블로그 꾸미는거 좋아하고 돈 많이 벌고 싶은 프론트엔드 개발자입니다.',
       },
       {
         hid: 'og:image',

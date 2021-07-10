@@ -5,7 +5,7 @@
 <script>
 export default {
   async asyncData(ctx) {
-    const postList = await ctx.$fetchPostList(ctx, ctx.route.path);
+    const postList = await ctx.$fetchPostList(ctx);
 
     return { postList };
   },

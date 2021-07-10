@@ -20,7 +20,11 @@ function setDescription(post) {
 }
 
 export default ({ app }, inject) => {
-  const fetchPostItem = async function (ctx, dir, slug) {
+  const fetchPostItem = async function (ctx) {
+    const path = ctx.route.fullPath;
+    const dir = path.split('/').slice(0, -1).join('/');
+    const slug = ctx.route.params.slug;
+
     try {
       const post = await ctx
         .$content(dir, slug, { deep: true })
@@ -36,10 +40,10 @@ export default ({ app }, inject) => {
     }
   };
 
-  const fetchPostList = async function (ctx, dir) {
+  const fetchPostList = async function (ctx) {
     try {
       const postList = await ctx
-        .$content(dir, { deep: true })
+        .$content(ctx.route.path, { deep: true })
         .sortBy('createdAt')
         .fetch();
       for (const p of postList) {
@@ -54,22 +58,6 @@ export default ({ app }, inject) => {
     }
   };
 
-  const fetchRecentPostList = async function (
-    ctx,
-    dir,
-    slug,
-    only = ['title']
-  ) {
-    const [prevPost, nextPost] = await ctx
-      .$content(dir)
-      .only(only)
-      .sortBy('createdAt')
-      .surround(slug)
-      .fetch();
-    return [prevPost, nextPost];
-  };
-
   inject('fetchPostItem', fetchPostItem);
   inject('fetchPostList', fetchPostList);
-  inject('fetchRecentPostList', fetchRecentPostList);
 };

@@ -1,5 +1,10 @@
 <template>
   <article class="post-item">
+    <meta-open-graph
+      :title="doc.title"
+      :image="doc.image"
+      :description="doc.description"
+    ></meta-open-graph>
     <div class="post-item__info">
       <h3 class="post-item__category">{{ category }}</h3>
       <h4 class="post-item__date">{{ doc.createdAt }}</h4>
@@ -18,26 +23,6 @@ export default {
       type: Object,
       default: Object,
     },
-  },
-  head() {
-    return {
-      title: this.doc.title,
-      meta: [
-        { hid: 'og:type', property: 'og:type', content: 'website' },
-        { hid: 'og:title', property: 'og:title', content: this.doc.title },
-        {
-          hid: 'og:description',
-          property: 'og:description',
-          content: this.doc.description,
-        },
-        { hid: 'og:image', property: 'og:image', content: this.doc.image },
-        {
-          hid: 'og:url',
-          property: 'og:url',
-          content: 'https://www.mclearning-blog.com',
-        },
-      ],
-    };
   },
   computed: {
     category() {
