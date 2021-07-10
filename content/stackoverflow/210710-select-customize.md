@@ -1,6 +1,6 @@
 ---
 title: 셀렉트박스(selectbox) option css 커스텀
-image:  
+image: /images/210710-select-customize/selectbox-custom.png
 ---
 
 HTML에서 셀렉트박스(selectbox)를 css로 custom하고 싶은데 option은 기본적으로 할 수가 없습니다.
@@ -38,7 +38,7 @@ select와 option 기반으로 또다른 요소를 만들겁니다. 하지만 sel
 - div.option-list: option들을 감싸고 있는 부분
 - div.option-item: option을 대체
 
-![](/images/210710-select-customize/select-custom.png)
+![](/images/210710-select-customize/select-custom-blueprint.png)
 
 ```javascript
 
