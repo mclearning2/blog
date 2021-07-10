@@ -30,6 +30,12 @@ export default {
           property: 'og:description',
           content: this.doc.description,
         },
+        { hid: 'og:image', property: 'og:image', content: this.doc.image },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: 'https://www.mclearning-blog.com',
+        },
       ],
     };
   },
