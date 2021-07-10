@@ -1,10 +1,11 @@
 export const state = () => ({
-  routeNames: {},
-  dockItems: [],
+  routeNames: null,
+  dockItems: null,
 });
 
 export const mutations = {
   setRouteNames(state, routes) {
+    state.routeNames = {};
     for (const route of routes) {
       state.routeNames[route.path] = route.name;
     }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-updown_white</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="icon-updown_white" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g filter="url(#filter-1)" id="sel-down">
+            <g>
+                <polygon id="Path" fill-opacity="0" fill="#FF0000" points="0 0 12 0 12 12 0 12"></polygon>
+                <path d="M8.163,5.011 L2.938,5.011 C2.813,5.011 2.706,5.057 2.614,5.148 C2.521,5.24 2.475,5.349 2.475,5.474 C2.475,5.599 2.521,5.707 2.614,5.799 L5.316,9.036 C5.407,9.128 5.516,9.173 5.641,9.173 C5.765,9.173 5.876,9.128 5.967,9.036 L8.487,5.799 C8.58,5.707 8.625,5.599 8.625,5.474 C8.625,5.349 8.58,5.24 8.487,5.148 C8.397,5.057 8.288,5.011 8.163,5.011 Z" id="Path" fill="#6B6B6B"></path>
+            </g>
+        </g>
+    </g>
+</svg>
