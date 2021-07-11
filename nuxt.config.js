@@ -4,6 +4,9 @@ export default {
 
   // github으로 배포하는 경우 base 수정 필요
   router: {
+    scrollBehavior() {
+      return { x: 0, y: 0 };
+    },
     extendRoutes(routes, resolve) {
       const path = {
         '/': 'Home',
@@ -149,7 +152,21 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  // https://stackoverflow.com/questions/51625767/how-to-make-a-compressed-js-files-with-all-pages-in-nuxt-js
+  // build: {
+  //   optimization: {
+  //     splitChunks: {
+  //       chunks: 'async',
+  //     },
+  //   },
+  //   splitChunks: {
+  //     pages: false,
+  //     vendor: false,
+  //     commons: false,
+  //     runtime: false,
+  //     layouts: false,
+  //   },
+  // },
 
   // Sitemap Configuration: https://sitemap.nuxtjs.org/usage/sitemap
   sitemap: {

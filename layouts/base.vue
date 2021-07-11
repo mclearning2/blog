@@ -7,9 +7,9 @@
 
 <script>
 export default {
-  created() {
+  mounted() {
     this.$store.commit('setRouteNames', this.$router.options.routes);
-    this.$store.commit('setDockItems');
+    this.$store.commit('setDockItems', this.$router.options.routes);
   },
 };
 </script>

@@ -44,7 +44,7 @@ export default ({ app }, inject) => {
     try {
       const postList = await ctx
         .$content(ctx.route.path, { deep: true })
-        .sortBy('createdAt')
+        .sortBy('createdAt', 'desc')
         .fetch();
       for (const p of postList) {
         p.createdAt = dateFmt(p.createdAt);
