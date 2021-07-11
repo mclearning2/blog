@@ -35,7 +35,11 @@ export default {
     return {
       title: this.title,
       meta: [
-        { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
+        {
+          hid: 'twitter:card',
+          name: 'twitter:card',
+          content: 'summary_large_image',
+        },
         {
           hid: 'twitter:title',
           name: 'twitter:title',

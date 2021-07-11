@@ -30,8 +30,5 @@ export default {
       return this.$store.state.routeNames[this.doc.dir];
     },
   },
-  mounted() {
-    console.log(this.doc);
-  },
 };
 </script>
