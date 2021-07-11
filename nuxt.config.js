@@ -9,6 +9,7 @@ export default {
         '/': 'Home',
         '/html': 'HTML',
         '/notice': '공지사항',
+        '/nuxt': 'Nuxt',
         '/stackoverflow': '문제해결노트',
       };
 
@@ -37,27 +38,33 @@ export default {
       },
       {
         hid: 'og:type',
+        property: 'og:type',
         content: 'website',
       },
       {
         hid: 'og:site_name',
+        property: 'og:site_name',
         content: "MCLearning's blog",
       },
       {
         hid: 'og:title',
+        property: 'og:title',
         content: "Welcome to MCLearning's blog",
       },
       {
         hid: 'og:description',
+        property: 'og:description',
         content:
           '열심히 살면서 블로그 꾸미는거 좋아하고 돈 많이 벌고 싶은 프론트엔드 개발자입니다.',
       },
       {
         hid: 'og:image',
+        property: 'og:image',
         content: 'https://mclearning-blog.com/_nuxt/img/logo.3db2992.png',
       },
       {
         hid: 'og:url',
+        property: 'og:url',
         content: 'https://mclearning-blog.com/',
       },
       {

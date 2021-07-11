@@ -30,7 +30,9 @@ SNS에 공유할 때 링크 뿐만아니라 우리가 흔히 보는 추가적인
 
 ### 트위터
 
+트위터는 더
+
 ## 테스트
 
-Test on: https://cards-dev.twitter.com/validator
-Test on: https://developers.facebook.com/tools/debug/
+https://cards-dev.twitter.com/validator
+https://developers.facebook.com/tools/debug/
