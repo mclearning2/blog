@@ -27,7 +27,7 @@ export default {
           image: require('~/assets/images/footer/sns/mail.png'),
         },
         facebook: {
-          link: 'https://www.facebook.com/profile.php?id=100069912350331',
+          link: 'https://www.facebook.com/mclearning2',
           image: require('~/assets/images/footer/sns/facebook.png'),
         },
         twitter: {
