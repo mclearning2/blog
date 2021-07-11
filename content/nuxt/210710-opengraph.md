@@ -30,9 +30,27 @@ SNS에 공유할 때 링크 뿐만아니라 우리가 흔히 보는 추가적인
 
 ### 트위터
 
-트위터는 더
+트위터는 더 풍부한 메타데이터를 제공하고 있습니다. [개발자 문서](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started)를 통해 확인해주시고 자주 사용하는 것들 몇 가지만 사용해보겠습니다.
+
+```html
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="페이지 제목" />
+<meta name="twitter:description" content="페이지 설명" />
+<meta
+  name="twitter:image"
+  content="http://www.mysite.com/article/article1.html"
+/>
+<meta name="twitter:domain" content="사이트 명" />
+```
+
+## Nuxt에서 적용
 
 ## 테스트
 
-https://cards-dev.twitter.com/validator
-https://developers.facebook.com/tools/debug/
+실제로 적용가능한지 글을 올리면서 테스트해봐도 되지만 [Twitter](https://cards-dev.twitter.com/validator)와 [Facebook](https://developers.facebook.com/tools/debug/)은 별개의 테스트 사이트를 제공하고 있습니다.
+
+### Twitter
+
+![](/images/210710-opengraph/210711-093510.png)
+
+### Facebook

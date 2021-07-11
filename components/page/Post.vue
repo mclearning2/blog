@@ -4,6 +4,7 @@
       :title="doc.title"
       :image="doc.image"
       :description="doc.description"
+      :path="doc.path"
     ></meta-open-graph>
     <div class="post-item__info">
       <h3 class="post-item__category">{{ category }}</h3>
@@ -28,6 +29,9 @@ export default {
     category() {
       return this.$store.state.routeNames[this.doc.dir];
     },
+  },
+  mounted() {
+    console.log(this.doc);
   },
 };
 </script>

@@ -17,9 +17,17 @@ export default {
       type: String,
       required: true,
     },
+    path: {
+      type: String,
+      require: true,
+    },
     type: {
       type: String,
       default: 'article',
+    },
+    url: {
+      type: String,
+      default: 'https://mclearning-blog.com',
     },
   },
 
@@ -41,7 +49,7 @@ export default {
         {
           hid: 'twitter:image',
           name: 'twitter:image',
-          content: 'https://mclearning-blog.com' + this.image,
+          content: this.url + this.image,
         },
         {
           hid: 'twitter:image:alt',
@@ -66,12 +74,17 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content: this.image,
+          content: this.url + this.image,
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: this.url + this.path,
         },
         {
           hid: 'og:image:secure_url',
           property: 'og:image:secure_url',
-          content: this.image,
+          content: this.url + this.image,
         },
         {
           hid: 'og:image:alt',

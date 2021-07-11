@@ -12,7 +12,7 @@ function setDescription(post) {
     if (child.tag && child.tag === 'p') {
       desc += child.children[0].value;
     }
-    if (desc.length > 100) {
+    if (desc.length >= 80) {
       break;
     }
   }
