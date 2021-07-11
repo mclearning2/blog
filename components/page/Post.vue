@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import Prism from 'prismjs';
+import 'prismjs/plugins/line-numbers/prism-line-numbers.js';
 export default {
   props: {
     doc: {
@@ -29,6 +31,10 @@ export default {
     category() {
       return this.$store.state.routeNames[this.doc.dir];
     },
+  },
+
+  mounted() {
+    Prism.highlightAll();
   },
 };
 </script>
