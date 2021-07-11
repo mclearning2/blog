@@ -7,7 +7,6 @@ export default {
     extendRoutes(routes, resolve) {
       const path = {
         '/': 'Home',
-        '/html': 'HTML',
         '/notice': '공지사항',
         '/nuxt': 'Nuxt',
         '/stackoverflow': '문제해결노트',
