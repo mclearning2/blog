@@ -2,7 +2,7 @@
   <article class="post-item">
     <meta-open-graph
       :title="doc.title"
-      :image="doc.image"
+      :image="doc.image ? doc.image : ''"
       :description="doc.description"
       :path="doc.path"
     ></meta-open-graph>
@@ -11,7 +11,12 @@
       <h4 class="post-item__date">{{ doc.createdAt }}</h4>
     </div>
     <h1 class="post-item__title">{{ doc.title }}</h1>
-    <img class="post-item__image" :src="doc.image" alt="cover-image" />
+    <img
+      v-if="doc.image"
+      class="post-item__image"
+      :src="doc.image"
+      alt="cover-image"
+    />
 
     <nuxt-content class="post-item__body" :document="doc"></nuxt-content>
   </article>
@@ -34,6 +39,7 @@ export default {
   },
 
   mounted() {
+    // for line number
     Prism.highlightAll();
   },
 };

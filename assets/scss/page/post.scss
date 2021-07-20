@@ -162,23 +162,16 @@
     }
 
     blockquote {
-      max-width: 50%;
+      max-width: 100%;
       width: fit-content;
       margin: 5rem auto;
+      padding: 2rem;
       font-style: italic;
-      text-align: center;
+      background-color: #edeeec;
+      border-radius: 10px;
 
-      &:before {
-        content: '\201C';
-        font-size: 5rem;
-        display: block;
-        text-align: center;
-      }
-      &:after {
-        content: '\201D';
-        font-size: 5rem;
-        display: block;
-        text-align: center;
+      p {
+        margin: 0;
       }
     }
 

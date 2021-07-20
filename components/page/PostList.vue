@@ -2,7 +2,7 @@
   <div class="site-post-list">
     <h2 class="title">{{ $route.name }}</h2>
     <a v-for="p of postList" :key="p.slug" :href="p.path" class="post-list">
-      <div class="post-list__image">
+      <div v-if="p.image" class="post-list__image">
         <img :src="p.image" alt="cover-image" />
       </div>
       <div class="post-list__text">
@@ -21,7 +21,7 @@ export default {
   props: {
     postList: {
       type: Array,
-      require: true,
+      required: true,
     },
   },
   methods: {
