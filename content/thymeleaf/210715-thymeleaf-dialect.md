@@ -121,7 +121,7 @@ HTML에서는 javascript와 css에 값을 전달하기 위한 방법으로 `data
 <!-- Arithmetic (+, -, /, *, %) -->
 <div th:with="isEven=(${prodStat.count} % 2 == 0)"></div>
 
-<!-- Compare (>, <, >=, <=, ==, !=) -->
+<!-- Compare ( >[&gt;], <[&lt;], >=[$ge;], <=[$lt;], ==[&eq;], !=[&ne;]) -->
 <div th:if="${prodStat.count} &gt; 1">
   <span
     th:text="'Execution mode is ' + ( (${execMode} == 'dev')? 'Development' : 'Production')"

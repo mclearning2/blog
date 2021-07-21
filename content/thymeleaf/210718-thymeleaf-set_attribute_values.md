@@ -105,4 +105,6 @@ Standard Dialect에 없다해도 `th:*`에 형태로만 적어준다면 원하�
 <span helloworld="John Apricot">...</span>
 ```
 
-## Support
+## 마치며
+
+다음 시간에는 반복을 통해 여러 태그를 만들 수 있는 `th:each`에 대해서 다뤄보겠습니다.
