@@ -1,7 +1,12 @@
-html, body {
+html,
+body {
   word-break: keep-all;
 }
 a {
-  color: black;
+  color: inherit;
   text-decoration: none;
+}
+
+.wrap {
+  background-color: $color1;
 }

@@ -1,5 +1,7 @@
 ---
 title: Thymeleaf 정리 - 속성값 설정 (Setting attribute values)
+tags: [test, test2, test3, 이렇게해도 되나]
+image: /images/210713-what-is-thymeleaf/210713-164531.png
 ---
 
 `th:*` 중에서 요소(tag)의 속성을 할당하는 다양한 방법들에 대해 알아보겠습니다.

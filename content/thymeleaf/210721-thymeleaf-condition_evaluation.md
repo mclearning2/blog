@@ -1,5 +1,8 @@
 ---
 title: thymeleaf - Conditional Evaluation
+tags:
+  [test, test2, test3, 이렇게해도 되나, 잘 모르겠네, 핳 ㅏ하 하 하 하, 하 하 하]
+image: /images/210713-what-is-thymeleaf/210713-164531.png
 ---
 
 어떤 태그가 조건에 따라 나타나거나 숨겨야 하는 상황이 있을 수 있습니다. 그럼 오늘 배울 `th:if`, `th:unless`, `th:switch`/`th:case`를 사용하면 됩니다.

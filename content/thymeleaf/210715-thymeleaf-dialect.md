@@ -1,5 +1,7 @@
 ---
 title: Thymeleaf 정리 - Dialect
+tags: [test, test2, test3, 이렇게해도 되나]
+image: /images/210713-what-is-thymeleaf/210713-164531.png
 ---
 
 오늘은 Thymeleaf Standard Dialect 형식에 들어가는 `th:*`과 `Expression`에 다뤄보겠습니다.

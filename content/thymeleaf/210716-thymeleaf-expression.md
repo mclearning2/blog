@@ -1,5 +1,7 @@
 ---
 title: Thymeleaf 정리 - Expression (Message)
+tags: [test, test2, test3, 이렇게해도 되나]
+image: /images/210713-what-is-thymeleaf/210713-164531.png
 ---
 
 `th:*`에 들어가는 값들 중 하나인 expression들에 대해서 다뤄보겠습니다. expression은 총 5가지의 형태가 있습니다.

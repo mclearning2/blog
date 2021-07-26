@@ -1,2 +1,46 @@
 .site-header {
+  padding: 20px;
+  width: 700px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  &__cover {
+    width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+    object-position: top;
+    filter: brightness(0.9);
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  &__search {
+    width: 246px;
+    margin: 20px auto;
+
+    input {
+      width: 100%;
+      height: 40px;
+      box-sizing: border-box;
+      background-color: $color2;
+      border-radius: 10px;
+      padding: 10px 15px;
+      border: 0;
+      color: white;
+
+      &:focus-visible {
+        outline: 0;
+      }
+
+      &::placeholder {
+        color: white;
+      }
+    }
+  }
 }

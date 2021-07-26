@@ -9,7 +9,7 @@ export default {
     },
     extendRoutes(routes, resolve) {
       const path = {
-        '/': 'Home',
+        '/': '전체 보기',
         '/thymeleaf': 'Thymeleaf',
         '/notice': '공지사항',
         '/nuxt': 'Nuxt',
@@ -103,11 +103,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '~/assets/scss/reset.scss',
-    '~/assets/scss/normalize.scss',
-    '~/assets/scss/common.scss',
-  ],
+  css: ['~/assets/scss/reset.scss', '~/assets/scss/common.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['~/plugins/async_data.js'],

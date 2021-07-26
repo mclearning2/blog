@@ -1,5 +1,7 @@
 ---
 title: thymeleaf - iteration
+tags: [test, test2, test3, 이렇게해도 되나]
+image: /images/210713-what-is-thymeleaf/210713-164531.png
 ---
 
 리스트나 페이지 숫자들과 같은 비슷한 패턴이 반복되는 경우들이 있습니다. 이러한 반복들을 가능하게 해주는 속성이 바로 `th:each`입니다.

@@ -1,14 +1,18 @@
 // Color
-$color1: #0e7677;
-$color2: #9a4545;
-$color3: #9d9d9d;
-$color4: #eaeaea;
-$color5: #5a5a5a;
+$color1: #191919;
+$color2: #2b2b2b;
+$color3: #4b4b4b;
+$color4: #9d9d9d;
+$color5: #edeeef;
+
+$key-color: #ffd055;
 
 // Layout
 $dock-width: 4rem;
 $dock-section-width: 5rem;
 $dock-margin-left: 1rem;
+$dock-bg-color: $color2;
+$dock-border-color: $color3;
 
 $post-font-size: 1.6rem;
 $footer-height: 100px;

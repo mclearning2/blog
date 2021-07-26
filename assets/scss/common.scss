@@ -1,13 +1,13 @@
 @import 'base/font.scss';
-
 @import 'base.scss';
 
-@import 'layout/dock.scss';
 @import 'layout/header.scss';
 @import 'layout/footer.scss';
-@import 'layout/mobile_nav.scss';
 
-@import 'page/index';
+@import 'components/dock.scss';
+@import 'components/mobile_dock.scss';
+@import 'components/sns.scss';
+
 @import 'page/post_list';
 @import 'page/post';
 
