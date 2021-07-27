@@ -1,0 +1,15 @@
+.site-footer {
+  display: flex;
+  height: 100px;
+  margin-top: 100px;
+  .designed-by {
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    margin: auto;
+
+    .emphasis {
+      color: $key-color;
+    }
+  }
+}

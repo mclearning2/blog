@@ -25,11 +25,25 @@
 
   .post-list {
     &__item {
+      position: relative;
       display: flex;
       height: 240px;
       padding: 30px 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-color: $color2;
+      border-top: 1px solid $color2;
+      border-bottom: 1px solid $color2;
+      transition: border 1s, padding 0.7s, filter 0.5s;
+
+      &:hover {
+        padding: 30px;
+
+        .image img {
+          filter: grayscale(0);
+        }
+        .text {
+          filter: brightness(1);
+        }
+      }
 
       .image {
         flex: 0 0 auto;
@@ -40,12 +54,16 @@
           width: 100%;
           height: 100%;
           border-radius: 10px;
+          filter: grayscale(1);
+          transition: filter 0.8s;
         }
       }
       .text {
-        padding: 10px 80px 10px 30px;
+        padding: 10px 0 10px 30px;
+        width: 350px;
         display: flex;
         flex-direction: column;
+        filter: brightness(0.7);
         .title {
           font-size: 2.2rem;
           font-weight: bold;
@@ -58,6 +76,11 @@
           font-size: 1.3rem;
           color: $key-color;
           margin-bottom: 10px;
+          width: fit-content;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
 
         .summary {
@@ -75,6 +98,7 @@
 
         .tags {
           margin-top: auto;
+          @include limitTextLine(1);
           &__item {
             display: inline-block;
             background-color: $color2;
@@ -82,59 +106,20 @@
             border-radius: 20px;
             padding: 4px 15px;
 
+            &:hover {
+              opacity: 0.8;
+            }
+
+            &:focus {
+              opacity: 0.5;
+            }
+
             &::before {
               content: '#';
               color: $key-color;
             }
           }
         }
-      }
-    }
-  }
-}
-
-@include mobile {
-  .site-post-list {
-    width: 100%;
-    padding: 2rem;
-    box-sizing: border-box;
-
-    .post-list {
-      padding-bottom: 1.2rem;
-      margin-bottom: 1.2rem;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-      flex-direction: row-reverse;
-
-      &:hover {
-        filter: none;
-        transform: none;
-      }
-
-      &:last-child {
-        border-bottom: none;
-      }
-
-      &__text {
-        padding: 1rem;
-      }
-
-      &__title {
-        font-size: 1.6rem;
-        margin-bottom: 0.5rem;
-      }
-
-      &__image {
-        width: 100px;
-        height: 100px;
-        border-radius: 10px;
-      }
-
-      &__summary {
-        display: none;
-      }
-
-      &__info {
-        margin-top: auto;
       }
     }
   }

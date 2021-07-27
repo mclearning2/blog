@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>next-end_white</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="next-end_white" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g filter="url(#filter-1)" id="next-end">
+            <g>
+                <polygon id="Path" fill-opacity="0" fill="#FF0000" points="0 0 28 0 28 28 0 28"></polygon>
+                <path d="M18.724,14.707 L15.895,17.536 C15.505,17.926 14.872,17.926 14.482,17.536 C14.089,17.145 14.089,16.512 14.482,16.121 L16.602,14 L14.482,11.879 C14.089,11.488 14.089,10.855 14.482,10.464 C14.872,10.074 15.505,10.074 15.895,10.464 L18.724,13.293 C19.114,13.683 19.114,14.316 18.724,14.707 L18.724,14.707 Z M10.894,17.536 C10.505,17.926 9.872,17.926 9.479,17.536 C9.089,17.145 9.089,16.512 9.479,16.121 L11.601,14 L9.479,11.879 C9.089,11.488 9.089,10.855 9.479,10.464 C9.872,10.074 10.505,10.074 10.894,10.464 L13.723,13.293 C14.114,13.683 14.114,14.316 13.723,14.707 L10.894,17.536 L10.894,17.536 Z" id="Shape" fill="#EEEEEE"></path>
+            </g>
+        </g>
+    </g>
+</svg>

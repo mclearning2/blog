@@ -5,11 +5,11 @@ tags:
 image: /images/210713-what-is-thymeleaf/210713-164531.png
 ---
 
-어떤 태그가 조건에 따라 나타나거나 숨겨야 하는 상황이 있을 수 있습니다. 그럼 오늘 배울 `th:if`, `th:unless`, `th:switch`/`th:case`를 사용하면 됩니다.
+**어떤 태그가 조건에 따라 나타나거나 숨겨야 하는 상황이 있을 수 있습니다. 그럼 오늘 배울 `th:if`, `th:unless`, `th:switch`/`th:case`를 사용하면 됩니다.**
 
 ## th:if
 
-`th:if=(boolean)`의 형태를 가지고 있으며 true 이면 태그가 나타나고 false면 없어집니다. 여기서 없어진다는 것은 `display: none`같은 것이 아니라 태그 자체가 없어진다고 생각하시면 됩니다.
+`th:if=(boolean)`의 [형태를](https://naver.com) 가지고 있으며 true 이면 태그가 나타나고 false면 없어집니다. 여기서 없어진다는 것은 `display: none`같은 것이 아니라 태그 자체가 없어진다고 생각하시면 됩니다.
 
 쉬운 예로 1부터 10까지 숫자들 중 짝수만 나타나게 하고 싶다면 이전 시간에 배웠던 `th:each`와 `th:if`를 통해 쉽게 구현할 수 있습니다.
 
