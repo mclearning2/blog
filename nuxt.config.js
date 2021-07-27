@@ -118,7 +118,6 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/style-resources',
     '@modules/generator',
-    '@nuxtjs/google-analytics',
   ],
 
   styleResources: {
