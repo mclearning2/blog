@@ -8,7 +8,7 @@
       </ul>
     </div>
 
-    <div v-for="p of postList" :key="p.slug" class="post-list">
+    <div v-for="p of $store.state.postList" :key="p.slug" class="post-list">
       <a :href="p.path" class="post-list__item">
         <div v-if="p.image" class="image">
           <img :src="p.image" alt="image" />
@@ -22,18 +22,17 @@
             <a v-for="t of p.tags" :key="t" class="tags__item">{{ t }}</a>
           </div>
         </div>
+        <img
+          class="arrow"
+          src="~/assets/images/common/arrow_yellow.svg"
+          alt="arrow"
+        />
       </a>
     </div>
   </div>
 </template>
 <script>
 export default {
-  props: {
-    postList: {
-      type: Array,
-      required: true,
-    },
-  },
   methods: {
     category(path) {
       return this.$store.state.routeNames[path];

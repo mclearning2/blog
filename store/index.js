@@ -1,6 +1,8 @@
 export const state = () => ({
   routeNames: {},
   dockItems: [],
+  post: {},
+  postList: [],
 });
 
 export const mutations = {
@@ -25,5 +27,11 @@ export const mutations = {
       }
     }
     state.dockItems.unshift(home);
+  },
+  setPostList(state, postList) {
+    state.postList = postList;
+  },
+  setPost(state, post) {
+    state.post = post;
   },
 };

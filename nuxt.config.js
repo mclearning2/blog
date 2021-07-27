@@ -2,11 +2,7 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
-  // github으로 배포하는 경우 base 수정 필요
   router: {
-    scrollBehavior() {
-      return { x: 0, y: 0 };
-    },
     extendRoutes(routes, resolve) {
       const path = {
         '/': '전체 보기',
@@ -99,6 +95,11 @@ export default {
       {
         src: '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js',
       },
+      // gtag
+      {
+        async: true,
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-VNY2TDSXKE',
+      },
     ],
   },
 
@@ -117,6 +118,7 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/style-resources',
     '@modules/generator',
+    '@nuxtjs/google-analytics',
   ],
 
   styleResources: {

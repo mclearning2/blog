@@ -32,7 +32,7 @@
       border-color: $color2;
       border-top: 1px solid $color2;
       border-bottom: 1px solid $color2;
-      transition: border 1s, padding 0.7s, filter 0.5s;
+      transition: all 0.7s;
 
       &:hover {
         padding: 30px;
@@ -42,6 +42,9 @@
         }
         .text {
           filter: brightness(1);
+        }
+        .arrow {
+          right: 0;
         }
       }
 
@@ -120,6 +123,13 @@
             }
           }
         }
+      }
+
+      .arrow {
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        transition: all 0.7s;
       }
     }
   }

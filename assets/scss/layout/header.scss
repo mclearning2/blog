@@ -9,7 +9,6 @@
     max-height: 150px;
     object-fit: contain;
     object-position: top;
-    filter: drop-shadow(2px 2px 9px $color4);
   }
 
   &__title {
@@ -26,6 +25,7 @@
   &__search {
     width: 246px;
     margin: 20px auto;
+    position: relative;
 
     input {
       width: 100%;
@@ -33,7 +33,7 @@
       box-sizing: border-box;
       background-color: $color2;
       border-radius: 10px;
-      padding: 10px 15px;
+      padding: 10px 40px 10px 20px;
       border: 0;
       color: white;
 
@@ -44,6 +44,13 @@
       &::placeholder {
         color: $color4;
       }
+    }
+
+    .search-ico {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }
