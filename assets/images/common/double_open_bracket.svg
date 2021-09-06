@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>prev-initial_whtie</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="prev-initial_whtie" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g filter="url(#filter-1)" id="prev-initial">
+            <g>
+                <polygon id="Path" fill-opacity="0" fill="#FF0000" points="0 0 28 0 28 28 0 28"></polygon>
+                <path d="M16.586,14 L18.708,16.121 C19.097,16.512 19.097,17.145 18.708,17.536 C18.317,17.926 17.683,17.926 17.293,17.536 L14.463,14.707 C14.075,14.316 14.075,13.683 14.463,13.293 L17.293,10.464 C17.683,10.074 18.317,10.074 18.708,10.464 C19.097,10.855 19.097,11.488 18.708,11.879 L16.586,14 Z M13.707,17.536 C13.317,17.926 12.684,17.926 12.292,17.536 L9.465,14.707 C9.073,14.316 9.073,13.683 9.465,13.293 L12.292,10.464 C12.684,10.074 13.317,10.074 13.707,10.464 C14.097,10.855 14.097,11.488 13.707,11.879 L11.585,14 L13.707,16.121 C14.097,16.512 14.097,17.145 13.707,17.536 L13.707,17.536 Z" id="Shape" fill="#EEEEEE"></path>
+            </g>
+        </g>
+    </g>
+</svg>

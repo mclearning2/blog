@@ -1,0 +1,32 @@
+.sns {
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    margin-right: 2.5rem;
+
+    filter: opacity(0.5) brightness(0) invert(1);
+    transition: filter 0.1s, margin 0.3s;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      filter: brightness(1);
+      margin-top: -5px;
+    }
+
+    img {
+      width: 25px;
+      height: 25px;
+      object-fit: contain;
+    }
+  }
+}
+
+@include mobile {
+  .sns {
+    margin-bottom: 1rem;
+  }
+}

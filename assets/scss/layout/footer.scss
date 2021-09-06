@@ -1,0 +1,36 @@
+.site-footer {
+  grid-row: -1;
+  grid-column: 1 / -1;
+  &__ad {
+    height: 90px;
+    margin: 20px 0;
+  }
+
+  .blog-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $color2;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: $color3;
+    font-size: 1.6rem;
+  }
+}
+
+@include mobile {
+  .site-footer {
+    grid-column: auto;
+    .blog-info {
+      flex-direction: column-reverse;
+      padding: 2rem;
+      box-sizing: border-box;
+
+      &__copy-right {
+        line-height: normal;
+      }
+    }
+  }
+}

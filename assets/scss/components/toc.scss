@@ -1,0 +1,64 @@
+.toc-nav {
+  position: sticky;
+
+  .title {
+    font-size: 2.5rem;
+    color: $color4;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid $color3;
+    text-align: center;
+  }
+
+  .toc-text {
+    cursor: pointer;
+  }
+
+  .active {
+    & > .toc-text {
+      color: $key-color;
+    }
+
+    &::marker {
+      color: $key-color;
+    }
+
+    &::before {
+      color: $key-color;
+    }
+  }
+
+  .toc-list {
+    list-style: decimal;
+    margin-left: 2rem;
+
+    .toc-item {
+      margin-top: 2rem;
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: $color4;
+      width: fit-content;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+  .toc-sub-list {
+    margin-left: 1.5rem;
+    margin-top: 1.7rem;
+
+    .toc-sub-item {
+      margin-top: 1rem;
+      font-size: 1.4rem;
+      width: fit-content;
+
+      &::before {
+        content: '-';
+        font-weight: bold;
+        display: inline-block;
+        width: 1rem;
+      }
+    }
+  }
+}

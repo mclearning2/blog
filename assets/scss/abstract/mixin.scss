@@ -1,0 +1,16 @@
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin limitTextLine($line) {
+  white-space: normal;
+  text-align: left;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  max-height: calc(#{$line} * 1.4em);
+  overflow: hidden;
+}

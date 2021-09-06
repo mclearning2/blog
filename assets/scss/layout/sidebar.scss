@@ -1,0 +1,15 @@
+.site-sidebar {
+  display: flex;
+  flex-direction: column;
+
+  &__sticky {
+    position: sticky;
+    top: 50px;
+  }
+}
+
+@include mobile {
+  .site-sidebar {
+    display: none;
+  }
+}

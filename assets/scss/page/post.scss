@@ -1,0 +1,280 @@
+.site-post {
+  &__content {
+    color: white;
+
+    .tags {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+      font-size: 1.3rem;
+
+      &__image {
+        height: 15px;
+        margin-right: 7px;
+      }
+
+      &__label {
+        white-space: nowrap;
+      }
+
+      &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-left: 1rem;
+        margin-top: 5px;
+        .item {
+          white-space: nowrap;
+          background-color: $color2;
+          color: $sub-color;
+          padding: 0.4em 0.7em;
+          border-radius: 8px;
+          margin-right: 5px;
+          margin-bottom: 5px;
+
+          &:hover {
+            opacity: 0.8;
+          }
+
+          &:focus {
+            opacity: 0.5;
+          }
+
+          &::before {
+            content: '# ';
+            color: $sub-color;
+          }
+        }
+      }
+    }
+  }
+
+  &__image {
+    display: flex;
+    margin: 0 auto;
+    max-height: 300px;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+
+  &__body {
+    font-size: $post-font-size;
+    word-break: break-all;
+    color: $color5;
+    line-height: 2.2;
+
+    h2,
+    h3,
+    h4 {
+      color: $color6;
+    }
+
+    h2 {
+      font-size: 1.7em;
+      font-weight: bold;
+      margin-top: 9rem;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid $color3;
+    }
+
+    h3 {
+      font-size: 1.3em;
+      font-weight: bold;
+      margin-top: 5rem;
+      margin-bottom: 4rem;
+      border-left: 4px solid $color3;
+      padding-left: 1rem;
+      line-height: 1.4;
+      color: $color6;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    p {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    b,
+    strong {
+      position: relative;
+      font-weight: bold;
+      display: inline;
+      color: #b77979;
+    }
+
+    code {
+      background-color: $color2;
+      padding: 0.1em 0.5em;
+      box-sizing: content-box;
+      border-radius: 0.6rem;
+      color: $key-color;
+    }
+
+    ul,
+    ol {
+      margin-left: 3rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      list-style: revert;
+    }
+    ul {
+      list-style: revert;
+    }
+
+    blockquote {
+      position: relative;
+      max-width: 100%;
+      margin: 10rem auto;
+      padding: 2rem 3rem;
+      background-color: #485e9a;
+      border-radius: 5px;
+      color: white;
+
+      code {
+        background-color: transparent;
+
+        padding: 0.2em 0.3em;
+      }
+
+      p {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        color: $color6;
+      }
+      strong {
+        display: block;
+        color: $color6;
+      }
+    }
+
+    hr {
+      width: 30%;
+      border: 0;
+      border-bottom: 1px solid $color3;
+      margin: 8rem auto;
+      position: relative;
+    }
+
+    a {
+      color: $sub-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    img {
+      display: block;
+      max-width: 85%;
+      max-height: 400px;
+      margin: 5rem auto;
+    }
+
+    .cp_embed_wrapper {
+      margin: 5rem auto;
+    }
+
+    .nuxt-content-highlight {
+      width: 100%;
+      overflow-x: auto;
+      margin: 3rem 0;
+
+      pre[class*='language-'] {
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: auto;
+
+        code {
+          width: 100%;
+          overflow-x: auto;
+          background-color: inherit;
+          padding: 0;
+          border-radius: 0;
+          color: inherit;
+          font-size: inherit;
+        }
+      }
+
+      .contains-task-list {
+        list-style-type: none;
+        margin-left: 0;
+
+        .task-list-item {
+          input {
+            margin-right: 1rem;
+          }
+        }
+      }
+
+      pre[class*='language-'].line-numbers {
+        position: relative;
+        padding-left: 3.8em;
+        counter-reset: linenumber;
+      }
+
+      pre[class*='language-'].line-numbers > code {
+        position: relative;
+        white-space: inherit;
+      }
+
+      .line-numbers .line-numbers-rows {
+        position: absolute;
+        pointer-events: none;
+        top: 0;
+        font-size: 100%;
+        left: -3.8em;
+        width: 3em; /* works for line-numbers below 1000 lines */
+        letter-spacing: -1px;
+        border-right: 1px solid #999;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      .line-numbers-rows > span {
+        display: block;
+        counter-increment: linenumber;
+      }
+
+      .line-numbers-rows > span:before {
+        content: counter(linenumber);
+        color: #999;
+        display: block;
+        padding-right: 0.8em;
+        text-align: right;
+        line-height: 1.5;
+      }
+    }
+  }
+  .comment {
+    margin-top: 2rem;
+    box-sizing: border-box;
+    .utterances {
+      max-width: none;
+    }
+  }
+}
+
+@include mobile {
+  .site-post {
+    &__body {
+      h2 {
+        font-size: 1.5em;
+      }
+      h3 {
+        font-size: 1.15em;
+      }
+
+      .nuxt-content-highlight {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

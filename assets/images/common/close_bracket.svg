@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>next_wihte</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="next_wihte" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g filter="url(#filter-1)" id="next">
+            <g>
+                <polygon id="Path" fill-opacity="0" fill="#FF0000" points="0 0 28 0 28 28 0 28"></polygon>
+                <path d="M15.724,14.707 L12.895,17.536 C12.504,17.926 11.87,17.926 11.48,17.536 C11.09,17.145 11.09,16.512 11.48,16.121 L13.602,14 L11.48,11.879 C11.09,11.488 11.09,10.855 11.48,10.464 C11.87,10.074 12.504,10.074 12.895,10.464 L15.724,13.293 C16.114,13.683 16.114,14.316 15.724,14.707 L15.724,14.707 Z" id="Path" fill="#EEEEEE"></path>
+            </g>
+        </g>
+    </g>
+</svg>

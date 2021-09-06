@@ -1,0 +1,112 @@
+.site-dock {
+  width: $dock-section-width;
+  height: fit-content;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+
+  .dock {
+    width: $dock-width;
+    background-color: $dock-bg-color;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    padding: 0.5rem 0.5rem;
+    border: 1px solid $dock-border-color;
+    box-shadow: 0px 0px 0px 1px $dock-bg-color;
+    transform: translateY(-50%);
+
+    &-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+
+      &__link {
+        display: flex;
+        align-items: center;
+      }
+
+      &__icon {
+        width: $dock-width;
+        height: $dock-width;
+        object-fit: contain;
+        cursor: auto;
+        overflow: hidden;
+
+        &:active {
+          filter: brightness(60%);
+        }
+      }
+
+      &__name {
+        position: relative;
+        background-color: $color2;
+        border-radius: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 0.7rem 1.3rem;
+        margin-left: 1rem;
+        border: 1px solid $color3;
+        box-shadow: 0px 0px 0px 1px $color2;
+        display: none;
+        white-space: nowrap;
+        color: $color6;
+
+        &.active {
+          display: block;
+        }
+
+        &.total {
+          padding: 0.2rem 0.5rem;
+          background-color: $key-color;
+          color: $color2;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-dock) {
+  .site-dock {
+    display: none;
+  }
+}
+
+@include mobile {
+  .site-dock {
+    position: static;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-top: 2rem;
+
+    .dock {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      flex-direction: row;
+      justify-content: center;
+      transform: none;
+      background-color: transparent;
+      border-color: transparent;
+      box-shadow: none;
+      box-sizing: border-box;
+
+      &-item {
+        justify-content: center;
+        &__name {
+          display: block;
+          white-space: initial;
+        }
+      }
+    }
+  }
+}

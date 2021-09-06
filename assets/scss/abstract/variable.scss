@@ -1,0 +1,37 @@
+// Color
+$bg-color: black;
+
+$color1: #191919;
+$color2: #2b2b2b;
+$color3: #4b4b4b;
+$color4: #9d9d9d;
+$color5: #bebebe;
+$color6: #edeeef;
+
+$key-color: #ffd055;
+$sub-color: #4f7bdf;
+
+$mobile-menu-color: #2b2b2baa;
+
+// Layout
+$header-height: 300px;
+$footer-height: 50px;
+$profile-height: 300px;
+$search-height: 50px;
+
+$dock-width: 4rem;
+$dock-section-width: 5rem;
+$dock-margin-left: 1rem;
+$dock-bg-color: $color2;
+$dock-border-color: $color3;
+
+$post-font-size: 1.8rem;
+
+// breakpoint
+$breakpoint-mobile: 768px;
+$breakpoint-dock: 1330px;
+
+:export {
+  dockWidth: $dock-width;
+  breakpointMobile: $breakpoint-mobile;
+}
