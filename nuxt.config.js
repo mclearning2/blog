@@ -40,7 +40,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://mclearning.dev/_nuxt/img/logo.3db2992.png',
+        content: 'https://mclearning.dev/logo.png',
       },
       {
         hid: 'og:url',
