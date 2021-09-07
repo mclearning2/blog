@@ -5,8 +5,7 @@
     </div>
     <div class="blog-info">
       <p class="blog-info__copy-right">
-        Copyright © mclearning-blog.com 2021-{{ todayYear }}. All Rights
-        Reserved.
+        Copyright © mclearning.dev 2021-{{ todayYear }}. All Rights Reserved.
       </p>
       <common-sns class="blog-info__sns"></common-sns>
     </div>

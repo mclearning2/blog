@@ -27,7 +27,7 @@ export default {
     },
     url: {
       type: String,
-      default: 'https://mclearning-blog.com',
+      default: 'https://mclearning.dev',
     },
   },
 

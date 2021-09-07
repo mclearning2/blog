@@ -149,7 +149,7 @@ export default {
 
   // Sitemap Configuration: https://sitemap.nuxtjs.org/usage/sitemap
   sitemap: {
-    hostname: 'https://mclearning-blog.com',
+    hostname: 'https://mclearning.dev',
     gzip: true,
     defaults: {
       priority: 1,
