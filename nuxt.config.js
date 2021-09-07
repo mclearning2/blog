@@ -40,16 +40,16 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://mclearning-blog.com/_nuxt/img/logo.3db2992.png',
+        content: 'https://mclearning.dev/_nuxt/img/logo.3db2992.png',
       },
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://mclearning-blog.com/',
+        content: 'https://mclearning.dev/',
       },
       {
         name: 'naver-site-verification',
-        content: 'e097e79f184f62ccc4dc2aaaca50423f9779685e',
+        content: '5985dd5c2fcb49c705e3be0f3fcec674ce38bde1',
       },
       {
         name: 'google-site-verification',
