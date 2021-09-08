@@ -53,15 +53,6 @@ export default ({ app }, inject) => {
     let list = await app.store
       .$content(fetchPath, { deep: true })
       .sortBy('createdAt', 'desc')
-      .only([
-        'title',
-        'tags',
-        'image',
-        'createdAt',
-        'dir',
-        'description',
-        'path',
-      ])
       .search(query)
       .skip(page * limit);
 
@@ -90,6 +81,7 @@ export default ({ app }, inject) => {
   const getTotalPostList = async function (path, saveStore = true) {
     const route = app.context.route;
     let fetchPath = path || route.fullPath;
+
     // '/html/' => 'html'
     fetchPath = fetchPath.replace('/', '');
     fetchPath = fetchPath.replace('/', '');

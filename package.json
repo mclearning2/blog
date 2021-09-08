@@ -19,6 +19,7 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sitemap": "^2.4.0",
+    "@nuxtjs/vercel-builder": "^0.21.3",
     "core-js": "^3.9.1",
     "highlight.js": "^11.0.1",
     "moment-timezone": "^0.5.33",
