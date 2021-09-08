@@ -22,8 +22,7 @@ function getSummary(body, summary = '') {
 
 export default ({ app }, inject) => {
   const fetchPostItem = async function (ctx) {
-    // const fetchPath = ctx.route.fullPath.replace('/', '');
-    const fetchPath = ctx.route.fullPath;
+    const fetchPath = ctx.route.fullPath.replace('/', '');
     const post = await app.store
       .$content(fetchPath)
       .fetch()
@@ -46,7 +45,10 @@ export default ({ app }, inject) => {
     if (route.query.query) {
       query = route.query.query;
     }
-    const fetchPath = path || route.fullPath;
+    let fetchPath = path || route.fullPath;
+    // '/html/' => 'html'
+    fetchPath = fetchPath.replace('/', '');
+    fetchPath = fetchPath.replace('/', '');
 
     let list = await app.store
       .$content(fetchPath, { deep: true })
