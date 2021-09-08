@@ -49,6 +49,8 @@ export default ({ app }, inject) => {
     // '/html/' => 'html'
     fetchPath = fetchPath.replace('/', '');
     fetchPath = fetchPath.replace('/', '');
+    console.log('fetchPath', fetchPath);
+    console.log('query', query);
 
     let list = await app.store
       .$content(fetchPath, { deep: true })
