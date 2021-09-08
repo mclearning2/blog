@@ -45,9 +45,10 @@ export default ({ app }, inject) => {
     if (route.query.query) {
       query = route.query.query;
     }
-    const fetchPath = path || route.fullPath;
-    console.log('fetchPath', fetchPath);
-    console.log('query', query);
+    let fetchPath = path || route.fullPath;
+    // '/html/' => 'html'
+    fetchPath = fetchPath.replace('/', '');
+    fetchPath = fetchPath.replace('/', '');
 
     let list = await app.store
       .$content(fetchPath, { deep: true })
@@ -79,18 +80,25 @@ export default ({ app }, inject) => {
 
   const getTotalPostList = async function (path, saveStore = true) {
     const route = app.context.route;
-    const fetchPath = path || route.fullPath;
+    let fetchPath = path || route.fullPath;
 
-    console.log(fetchPath);
+    // '/html/' => 'html'
+    fetchPath = fetchPath.replace('/', '');
+    fetchPath = fetchPath.replace('/', '');
 
-    const res = await app.store
-      .$content(fetchPath, { deep: true })
-      .only(['title'])
-      .fetch();
-    if (saveStore) {
-      app.store.commit('setTotalPostList', res.length);
+    try {
+      const res = await app.store
+        .$content(fetchPath, { deep: true })
+        .only('')
+        .fetch();
+      if (saveStore) {
+        app.store.commit('setTotalPostList', res.length);
+      }
+      return res.length;
+    } catch (e) {
+      console.error('getTotalPostList', e);
+      return 0;
     }
-    return res.length;
   };
 
   inject('fetchPostItem', fetchPostItem);
