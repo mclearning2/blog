@@ -67,11 +67,11 @@ export default {
       },
     ],
     script: [
-      {
-        defer: true,
-        hid: 'adsense',
-        src: '/adsense.js',
-      },
+      // {
+      //   defer: true,
+      //   hid: 'adsense',
+      //   src: '/adsense.js',
+      // },
     ],
   },
 
@@ -110,7 +110,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    // // https://go.nuxtjs.dev/content
+    // https://go.nuxtjs.dev/content
     '@nuxt/content',
     // https://sitemap.nuxtjs.org/guide/setup
     '@nuxtjs/sitemap',
@@ -150,7 +150,7 @@ export default {
           name,
         });
         routes.push({
-          path: '/' + path + '/:year/:month/:slug',
+          path: '/' + path + '/:slug',
           component: postComp,
           name: name + '-slug',
         });
@@ -191,7 +191,6 @@ export default {
     async routes() {
       const { $content } = require('@nuxt/content');
       const files = await $content({ deep: true }).only(['path']).fetch();
-
       return files.map((file) => (file.path === '/' ? '/' : file.path));
     },
   },

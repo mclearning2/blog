@@ -53,7 +53,15 @@ export default ({ app }, inject) => {
     let list = await app.store
       .$content(fetchPath, { deep: true })
       .sortBy('createdAt', 'desc')
-      .only(['title', 'tags', 'image', 'createdAt', 'dir', 'description'])
+      .only([
+        'title',
+        'tags',
+        'image',
+        'createdAt',
+        'dir',
+        'description',
+        'path',
+      ])
       .search(query)
       .skip(page * limit);
 
@@ -61,18 +69,22 @@ export default ({ app }, inject) => {
       list = list.limit(limit);
     }
 
-    list = await list.fetch().catch((e) => {
-      console.error('fetchPostList', e);
-    });
+    try {
+      list = await list.fetch();
 
-    for (const p of list) {
-      if (p.createdAt) {
-        p.createdAt = dateFmt(p.createdAt);
+      for (const p of list) {
+        if (p.createdAt) {
+          p.createdAt = dateFmt(p.createdAt);
+        }
+        if (p.body) {
+          p.description = getSummary(p.body);
+        }
       }
+      app.store.commit('setPostList', list);
+      return list;
+    } catch (e) {
+      console.error('fetchPostList', e);
     }
-
-    app.store.commit('setPostList', list);
-    return list;
   };
 
   const getTotalPostList = async function (path, saveStore = true) {

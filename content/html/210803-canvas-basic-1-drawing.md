@@ -2,12 +2,11 @@
 title: HTML Canvas 정리 1] 간단한 도형 그리기
 tags:
   - canvas 정리
-image: /images/canvas-basic-1-drawing/210909-015041.png
-description: HTML Canvas에서 다양한 도형을 그리는 방법에 대해 알아보겠습니다.
+image: /images/210803-canvas-basic-1-drawing/210909-015041.png
 createdAt: 2021-08-03
 ---
 
-웹에서 도형, 이미지 등을 그리고 싶을 때 보통 Canvas를 사용합니다.
+HTML Canvas에서 다양한 도형을 그리는 방법에 대해 알아보겠습니다. 웹에서 도형, 이미지 등을 그리고 싶을 때 보통 Canvas를 사용합니다.
 
 [MDN](https://developer.mozilla.org/ko/docs/Web/API/Canvas_API)을 토대로 Canvas에 대한 내용을 내 나름대로 소화해서 정리했습니다. Canvas 기초에 대해 알아보시는데 도움이 되면 좋겠네요.
 
@@ -49,7 +48,7 @@ const ctx = canvas.getContext('2d');
 
 캔버스의 **좌표계는 좌측 상단이 원점**입니다. 즉 아래로 갈 수록 y값이 커지고 오른쪽으로 갈수록 x값이 커집니다. 이 점을 유의하며 도형을 그려봅시다.
 
-![](/images/canvas-basic-1-drawing/210909-020137.png)
+![](/images/210803-canvas-basic-1-drawing/210909-020137.png)
 
 ### 직선 그리기
 
@@ -65,7 +64,7 @@ const ctx = canvas.getContext('2d');
 
 이제 그려볼까요??
 
-![](/images/canvas-basic-1-drawing/210909-020216.png)
+![](/images/210803-canvas-basic-1-drawing/210909-020216.png)
 
 <p class="codepen" data-height="388" data-default-tab="js,result" data-slug-hash="WNjKRMd" data-editable="true" data-user="mclearning2" style="height: 388px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/mclearning2/pen/WNjKRMd">
@@ -104,7 +103,7 @@ closePath 덕에 마지막에 lineTo는 굳이 필요하지 않습니다.
 
 위 3개 함수로 다음 그림을 그려볼까요?
 
-![](/images/canvas-basic-1-drawing/210909-020635.png)
+![](/images/210803-canvas-basic-1-drawing/210909-020635.png)
 
 <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="JjNBWPY" data-editable="true" data-user="mclearning2" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/mclearning2/pen/JjNBWPY">
@@ -133,7 +132,7 @@ ctx.fill();
 
 이제 각 좌표에다가 원을 그려볼까요? 이왕 그리는거 다양한 형태로 그려보겠습니다.
 
-![](/images/canvas-basic-1-drawing/210909-020831.png)
+![](/images/210803-canvas-basic-1-drawing/210909-020831.png)
 
 <p class="codepen" data-height="706" data-default-tab="js,result" data-slug-hash="vYmameb" data-editable="true" data-user="mclearning2" style="height: 706px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/mclearning2/pen/vYmameb">

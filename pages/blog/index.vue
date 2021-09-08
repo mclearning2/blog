@@ -4,7 +4,7 @@
     <ul class="post-list__items">
       <li v-for="p of $store.state.postList" :key="p.slug" class="post-item">
         <h3 class="post-item__category">
-          <a :href="getDir(p.dir)">
+          <a :href="p.dir">
             {{ category(p.dir) }}
           </a>
         </h3>
@@ -72,11 +72,8 @@ export default {
         behavior: 'smooth',
       });
     },
-    getDir(path) {
-      return '/' + path.split('/')[1];
-    },
     category(path) {
-      return this.$store.state.routePathName[this.getDir(path)];
+      return this.$store.state.routePathName[path];
     },
   },
 };
