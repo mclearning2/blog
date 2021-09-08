@@ -2,12 +2,7 @@
   <section class="post-list">
     <h2 class="post-list__title">{{ $route.name }}</h2>
     <ul class="post-list__items">
-      <li
-        v-for="p of $store.state.postList"
-        :key="p.slug"
-        :href="p.path"
-        class="post-item"
-      >
+      <li v-for="p of $store.state.postList" :key="p.slug" class="post-item">
         <h3 class="post-item__category">
           <a :href="getDir(p.dir)">
             {{ category(p.dir) }}
