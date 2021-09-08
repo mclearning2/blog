@@ -83,19 +83,14 @@ export default ({ app }, inject) => {
 
     console.log(fetchPath);
 
-    try {
-      const res = await app.store
-        .$content(fetchPath, { deep: true })
-        .only('')
-        .fetch();
-      if (saveStore) {
-        app.store.commit('setTotalPostList', res.length);
-      }
-      return res.length;
-    } catch (e) {
-      console.error('getTotalPostList', e);
-      return 0;
+    const res = await app.store
+      .$content(fetchPath, { deep: true })
+      .only(['title'])
+      .fetch();
+    if (saveStore) {
+      app.store.commit('setTotalPostList', res.length);
     }
+    return res.length;
   };
 
   inject('fetchPostItem', fetchPostItem);
