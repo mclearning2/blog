@@ -77,7 +77,10 @@ export default ({ app }, inject) => {
 
   const getTotalPostList = async function (path, saveStore = true) {
     const route = app.context.route;
-    const fetchPath = path || route.fullPath;
+    let fetchPath = path || route.fullPath;
+    // '/html/' => 'html'
+    fetchPath = fetchPath.replace('/', '');
+    fetchPath = fetchPath.replace('/', '');
 
     try {
       const res = await app.store
