@@ -133,7 +133,6 @@ export default {
     },
   },
   router: {
-    mode: `history`,
     extendRoutes(routes, resolve) {
       const postListComp = resolve(__dirname, 'pages/blog/index.vue');
       const postComp = resolve(__dirname, 'pages/blog/_slug.vue');
