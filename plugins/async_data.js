@@ -45,10 +45,7 @@ export default ({ app }, inject) => {
     if (route.query.query) {
       query = route.query.query;
     }
-    let fetchPath = path || route.fullPath;
-    // '/html/' => 'html'
-    fetchPath = fetchPath.replace('/', '');
-    fetchPath = fetchPath.replace('/', '');
+    const fetchPath = path || route.fullPath;
     console.log('fetchPath', fetchPath);
     console.log('query', query);
 
@@ -82,11 +79,9 @@ export default ({ app }, inject) => {
 
   const getTotalPostList = async function (path, saveStore = true) {
     const route = app.context.route;
-    let fetchPath = path || route.fullPath;
+    const fetchPath = path || route.fullPath;
 
-    // '/html/' => 'html'
-    fetchPath = fetchPath.replace('/', '');
-    fetchPath = fetchPath.replace('/', '');
+    console.log(fetchPath);
 
     try {
       const res = await app.store
