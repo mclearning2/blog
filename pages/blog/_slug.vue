@@ -53,6 +53,9 @@
 import Prism from 'prismjs';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.js';
 export default {
+  asyncData(ctx) {
+    ctx.$fetchPostItem(ctx);
+  },
   computed: {
     post() {
       return this.$store.state.post;

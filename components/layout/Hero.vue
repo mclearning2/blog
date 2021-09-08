@@ -28,8 +28,11 @@ export default {
     },
   },
   methods: {
+    getDir(path) {
+      return '/' + path.split('/')[1];
+    },
     category(path) {
-      return this.$store.state.routeInfo[path].name;
+      return this.$store.state.routePathName[this.getDir(path)];
     },
   },
 };

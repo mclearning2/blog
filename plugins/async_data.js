@@ -22,7 +22,8 @@ function getSummary(body, summary = '') {
 
 export default ({ app }, inject) => {
   const fetchPostItem = async function (ctx) {
-    const fetchPath = ctx.route.fullPath.replace('/', '');
+    // const fetchPath = ctx.route.fullPath.replace('/', '');
+    const fetchPath = ctx.route.fullPath;
     const post = await app.store
       .$content(fetchPath)
       .fetch()
@@ -45,16 +46,12 @@ export default ({ app }, inject) => {
     if (route.query.query) {
       query = route.query.query;
     }
-
-    let fetchPath = path || route.fullPath;
-
-    // '/html/' => 'html'
-    fetchPath = fetchPath.replace('/', '');
-    fetchPath = fetchPath.replace('/', '');
+    const fetchPath = path || route.fullPath;
 
     let list = await app.store
       .$content(fetchPath, { deep: true })
       .sortBy('createdAt', 'desc')
+      .only(['title', 'tags', 'image', 'createdAt', 'dir', 'description'])
       .search(query)
       .skip(page * limit);
 
@@ -70,12 +67,6 @@ export default ({ app }, inject) => {
       if (p.createdAt) {
         p.createdAt = dateFmt(p.createdAt);
       }
-      if (p.body) {
-        p.description = getSummary(p.body);
-      }
-      if (p.updatedAt) {
-        p.updatedAt = dateFmt(p.updatedAt);
-      }
     }
 
     app.store.commit('setPostList', list);
@@ -84,24 +75,21 @@ export default ({ app }, inject) => {
 
   const getTotalPostList = async function (path, saveStore = true) {
     const route = app.context.route;
-    let fetchPath = path || route.fullPath;
+    const fetchPath = path || route.fullPath;
 
-    // '/html/' => 'html'
-    fetchPath = fetchPath.replace('/', '');
-    fetchPath = fetchPath.replace('/', '');
-
-    const res = await app.store
-      .$content(fetchPath, { deep: true })
-      .only('')
-      .fetch()
-      .catch((e) => {
-        console.error('getTotalPostList', e);
-      });
-
-    if (saveStore) {
-      app.store.commit('setTotalPostList', res.length);
+    try {
+      const res = await app.store
+        .$content(fetchPath, { deep: true })
+        .only('')
+        .fetch();
+      if (saveStore) {
+        app.store.commit('setTotalPostList', res.length);
+      }
+      return res.length;
+    } catch (e) {
+      console.error('getTotalPostList', e);
+      return 0;
     }
-    return res.length;
   };
 
   inject('fetchPostItem', fetchPostItem);

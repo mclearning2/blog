@@ -49,11 +49,11 @@ export default {
       },
       {
         name: 'naver-site-verification',
-        content: '5985dd5c2fcb49c705e3be0f3fcec674ce38bde1',
+        content: process.env.NAVER_SITE_VERIFICATION,
       },
       {
         name: 'google-site-verification',
-        content: 'YNvjD0t84idJqnnSOnDFSdGUWVtfSfeh8rg4_Hwnqro',
+        content: process.env.GOOGLE_SITE_VERIFICATION,
       },
     ],
     link: [
@@ -67,11 +67,6 @@ export default {
       },
     ],
     script: [
-      // gtag
-      {
-        async: true,
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-VNY2TDSXKE',
-      },
       {
         defer: true,
         hid: 'adsense',
@@ -84,7 +79,7 @@ export default {
   css: ['~/assets/scss/reset.scss', '~/assets/scss/common.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/async_data.js', '~/plugins/gtag.js'],
+  plugins: ['~/plugins/async_data.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -95,7 +90,13 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/style-resources',
     '@nuxtjs/moment',
+    '@nuxtjs/google-analytics',
   ],
+
+  googleAnalytics: {
+    id: process.env.GTAG, // Used as fallback if no runtime config is provided
+  },
+
   moment: {
     timezone: true,
     efaultTimezone: 'Asia/Seoul',
@@ -109,12 +110,14 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/content
+    // // https://go.nuxtjs.dev/content
     '@nuxt/content',
     // https://sitemap.nuxtjs.org/guide/setup
     '@nuxtjs/sitemap',
     // https://www.npmjs.com/package/@nuxtjs/robots
     '@nuxtjs/robots',
+
+    '@nuxtjs/dotenv',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -127,6 +130,34 @@ export default {
       prism: {
         theme: false,
       },
+    },
+  },
+  router: {
+    mode: `history`,
+    extendRoutes(routes, resolve) {
+      const postListComp = resolve(__dirname, 'pages/blog/index.vue');
+      const postComp = resolve(__dirname, 'pages/blog/_slug.vue');
+      routes.length = 0;
+      routes.push({
+        path: '/',
+        component: postListComp,
+        name: '전체 보기',
+      });
+
+      function addCategory(path, name) {
+        routes.push({
+          path: '/' + path,
+          component: postListComp,
+          name,
+        });
+        routes.push({
+          path: '/' + path + '/:year/:month/:slug',
+          component: postComp,
+          name: name + '-slug',
+        });
+      }
+
+      addCategory('html', 'HTML');
     },
   },
 

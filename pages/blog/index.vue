@@ -1,6 +1,6 @@
 <template>
   <section class="post-list">
-    <h2 class="post-list__title">{{ category($route.path) }}</h2>
+    <h2 class="post-list__title">{{ $route.name }}</h2>
     <ul class="post-list__items">
       <li
         v-for="p of $store.state.postList"
@@ -9,7 +9,7 @@
         class="post-item"
       >
         <h3 class="post-item__category">
-          <a :href="p.dir">
+          <a :href="getDir(p.dir)">
             {{ category(p.dir) }}
           </a>
         </h3>
@@ -43,6 +43,10 @@
 </template>
 <script>
 export default {
+  asyncData(ctx) {
+    ctx.$fetchPostList(0, ctx.store.state.postPerPage);
+    ctx.$getTotalPostList(ctx.route.path);
+  },
   data() {
     return {
       pageIdx: 0,
@@ -61,22 +65,23 @@ export default {
   watch: {
     pageIdx(idx) {
       this.$fetchPostList(idx, this.postPerPage);
+      this.$getTotalPostList(this.$route.fullPath);
       this.scrollToPostTitle();
     },
   },
-  created() {
-    this.$getTotalPostList(this.$route.path);
-  },
   methods: {
-    category(path) {
-      return this.$store.state.routeInfo[path].name;
-    },
     scrollToPostTitle() {
       const offsetTop = document.querySelector('.post-list__title').offsetTop;
       scroll({
         top: offsetTop - 80,
         behavior: 'smooth',
       });
+    },
+    getDir(path) {
+      return '/' + path.split('/')[1];
+    },
+    category(path) {
+      return this.$store.state.routePathName[this.getDir(path)];
     },
   },
 };
