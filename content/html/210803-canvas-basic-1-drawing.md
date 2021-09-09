@@ -8,6 +8,8 @@ createdAt: 2021-08-03
 
 HTML Canvas에서 다양한 도형을 그리는 방법에 대해 알아보겠습니다. 웹에서 도형, 이미지 등을 그리고 싶을 때 보통 Canvas를 사용합니다.
 
+<!--more-->
+
 [MDN](https://developer.mozilla.org/ko/docs/Web/API/Canvas_API)을 토대로 Canvas에 대한 내용을 내 나름대로 소화해서 정리했습니다. Canvas 기초에 대해 알아보시는데 도움이 되면 좋겠네요.
 
 ## Canvas 그리기 준비

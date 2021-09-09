@@ -2,6 +2,37 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  router: {
+    extendRoutes(routes, resolve) {
+      const postListComp = resolve(__dirname, 'pages/blog/index.vue');
+      const postComp = resolve(__dirname, 'pages/blog/_slug.vue');
+      routes.length = 0;
+      routes.push({
+        path: '/',
+        component: postListComp,
+        name: '전체 보기',
+      });
+
+      function addCategory(path, name) {
+        routes.push({
+          path: '/' + path,
+          component: postListComp,
+          name,
+        });
+        routes.push({
+          path: '/' + path + '/:slug',
+          component: postComp,
+          name: name + '-slug',
+        });
+      }
+
+      addCategory('html', 'HTML');
+      addCategory('css', 'CSS');
+      addCategory('js', 'Javascript');
+      addCategory('vuejs', 'VueJS');
+    },
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: `블로그 꾸미고 노는 걸 좋아하는 프론트엔드 개발자`,
@@ -130,33 +161,6 @@ export default {
       prism: {
         theme: false,
       },
-    },
-  },
-  router: {
-    extendRoutes(routes, resolve) {
-      const postListComp = resolve(__dirname, 'pages/blog/index.vue');
-      const postComp = resolve(__dirname, 'pages/blog/_slug.vue');
-      routes.length = 0;
-      routes.push({
-        path: '/',
-        component: postListComp,
-        name: '전체 보기',
-      });
-
-      function addCategory(path, name) {
-        routes.push({
-          path: '/' + path,
-          component: postListComp,
-          name,
-        });
-        routes.push({
-          path: '/' + path + '/:slug',
-          component: postComp,
-          name: name + '-slug',
-        });
-      }
-
-      addCategory('html', 'HTML');
     },
   },
 

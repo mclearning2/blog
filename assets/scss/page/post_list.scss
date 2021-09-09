@@ -46,7 +46,7 @@
           .title {
             font-size: 2rem;
             font-weight: bold;
-            line-height: normal;
+            @include limitTextLine(2);
           }
           .summary {
             font-size: 1.4rem;

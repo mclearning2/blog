@@ -5,21 +5,6 @@ function dateFmt(date) {
   }
 }
 
-function getSummary(body, summary = '') {
-  for (const child of body.children) {
-    if (child.value) {
-      summary += child.value;
-    }
-    if (child.children) {
-      summary = getSummary(child, summary);
-    }
-    if (summary.length >= 130) {
-      break;
-    }
-  }
-  return summary;
-}
-
 export default ({ app }, inject) => {
   const fetchPostItem = async function (ctx) {
     const fetchPath = ctx.route.fullPath.replace('/', '');
@@ -31,7 +16,6 @@ export default ({ app }, inject) => {
       });
 
     post.createdAt = dateFmt(post.createdAt);
-    post.description = getSummary(post.body);
 
     app.store.commit('setPostItem', post);
     return post;
@@ -52,6 +36,15 @@ export default ({ app }, inject) => {
 
     let list = await app.store
       .$content(fetchPath, { deep: true })
+      .only([
+        'title',
+        'createdAt',
+        'body',
+        'description',
+        'dir',
+        'path',
+        'image',
+      ])
       .sortBy('createdAt', 'desc')
       .search(query)
       .skip(page * limit);
@@ -66,9 +59,6 @@ export default ({ app }, inject) => {
       for (const p of list) {
         if (p.createdAt) {
           p.createdAt = dateFmt(p.createdAt);
-        }
-        if (p.body) {
-          p.description = getSummary(p.body);
         }
       }
       app.store.commit('setPostList', list);
@@ -96,7 +86,7 @@ export default ({ app }, inject) => {
       }
       return res.length;
     } catch (e) {
-      console.error('getTotalPostList', e);
+      console.warn('getTotalPostList', e);
       return 0;
     }
   };
