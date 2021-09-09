@@ -98,6 +98,11 @@ export default {
       },
     ],
     script: [
+      // gtag
+      {
+        async: true,
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-VNY2TDSXKE',
+      },
       // {
       //   defer: true,
       //   hid: 'adsense',
@@ -110,7 +115,7 @@ export default {
   css: ['~/assets/scss/reset.scss', '~/assets/scss/common.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/async_data.js'],
+  plugins: ['~/plugins/async_data.js', '~/plugins/gtag.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -121,13 +126,7 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/style-resources',
     '@nuxtjs/moment',
-    '@nuxtjs/google-analytics',
   ],
-
-  googleAnalytics: {
-    id: process.env.GTAG, // Used as fallback if no runtime config is provided
-  },
-
   moment: {
     timezone: true,
     efaultTimezone: 'Asia/Seoul',
@@ -147,7 +146,6 @@ export default {
     '@nuxtjs/sitemap',
     // https://www.npmjs.com/package/@nuxtjs/robots
     '@nuxtjs/robots',
-
     '@nuxtjs/dotenv',
   ],
 
