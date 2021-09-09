@@ -122,7 +122,9 @@ export default {
 
 Notion을 CMS로 쓸 생각도 해봤지만 아직 API가 Beta라서 자주 바뀌면 내가 고칠 자신이 없다.(귀찮아서..)
 
-## 3줄 요약
+## 마무리하며
+
+3줄 요약
 
 - Notion 같은 CMS를 원하면 Ghost 추천
 - 자체 호스팅과 DB 관리를 즐긴다면 Strapi 추천
