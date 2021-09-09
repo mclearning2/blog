@@ -34,7 +34,6 @@ export default {
   beforeCreate() {
     this.$store.commit('setRoutePathName', this.$router.options.routes);
     this.$store.commit('setDockItems', this.$router.options.routes);
-    this.$activeGTag();
   },
   mounted() {
     // Loading이 일정시간 안지워지면 강제로 지우기
@@ -42,6 +41,7 @@ export default {
       document.querySelector('body').classList.remove('loading');
     }, 5000);
 
+    this.$activeGTag();
     window.onload = function () {
       document.querySelector('body').classList.remove('loading');
     };

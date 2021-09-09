@@ -2,7 +2,7 @@ from glob import glob
 
 from PIL import Image
 
-fixed_height = 400
+fixed_height = 500
 
 for path in glob("static/images/**/*.png"):
     img = Image.open(path);
