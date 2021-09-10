@@ -1,7 +1,12 @@
 function dateFmt(date) {
   if (date) {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(date).toLocaleDateString('ko', options);
+    const d = new Date(date);
+    const year = d.getFullYear();
+    const month = ('0' + d.getMonth()).slice(-2);
+    const day = ('0' + d.getDate()).slice(-2);
+    return `${year}-${month}-${day}`;
+  } else {
+    return '';
   }
 }
 
@@ -18,6 +23,7 @@ export default ({ app }, inject) => {
     post.createdAt = dateFmt(post.createdAt);
 
     app.store.commit('setPostItem', post);
+    console.log(post);
     return post;
   };
 
@@ -61,6 +67,7 @@ export default ({ app }, inject) => {
           p.createdAt = dateFmt(p.createdAt);
         }
       }
+      console.log(list);
       app.store.commit('setPostList', list);
       return list;
     } catch (e) {

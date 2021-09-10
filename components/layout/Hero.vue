@@ -5,7 +5,7 @@
     <!-- Header -->
     <header v-else-if="'title' in post" class="post-hero">
       <h3 class="post-hero__category">
-        <a :href="post.dir">
+        <a :href="getDir(post.dir)">
           {{ category(post.dir) }}
         </a>
       </h3>
@@ -28,8 +28,11 @@ export default {
     },
   },
   methods: {
+    getDir(path) {
+      return path.split('/')[1];
+    },
     category(path) {
-      return this.$store.state.routePathName[path];
+      return this.$store.state.routePathName['/' + this.getDir(path)];
     },
   },
 };

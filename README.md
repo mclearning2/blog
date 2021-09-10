@@ -1,20 +1,3 @@
 # blog
 
-## Build Setup
-
-```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/698ef340-acf6-40c3-8996-f4f5be7d66f1/deploy-status)](https://app.netlify.com/sites/mclearning2/deploys)

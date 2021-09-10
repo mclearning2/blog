@@ -72,8 +72,11 @@ export default {
         behavior: 'smooth',
       });
     },
+    getDir(path) {
+      return path.split('/')[1];
+    },
     category(path) {
-      return this.$store.state.routePathName[path];
+      return this.$store.state.routePathName['/' + this.getDir(path)];
     },
   },
 };

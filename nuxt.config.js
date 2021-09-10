@@ -20,7 +20,7 @@ export default {
           name,
         });
         routes.push({
-          path: '/' + path + '/:slug',
+          path: '/' + path + '/:year/:month/:slug',
           component: postComp,
           name: name + '-slug',
         });
