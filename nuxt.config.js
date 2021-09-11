@@ -13,6 +13,11 @@ export default {
         name: '전체 보기',
       });
 
+      routes.push({
+        path: '/tag',
+        component: postListComp,
+      });
+
       function addCategory(path, name) {
         routes.push({
           path: '/' + path,
@@ -103,11 +108,11 @@ export default {
         async: true,
         src: 'https://www.googletagmanager.com/gtag/js?id=G-VNY2TDSXKE',
       },
-      // {
-      //   defer: true,
-      //   hid: 'adsense',
-      //   src: '/adsense.js',
-      // },
+      {
+        defer: true,
+        hid: 'adsense',
+        src: '/adsense.js',
+      },
     ],
   },
 

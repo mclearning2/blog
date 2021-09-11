@@ -20,7 +20,9 @@
 
         <ul class="tags__list">
           <li v-for="t of post.tags" :key="t" class="item">
-            {{ t }}
+            <a :href="`/?t=${t}`">
+              {{ t }}
+            </a>
           </li>
         </ul>
       </div>

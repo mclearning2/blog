@@ -12,7 +12,7 @@ function dateFmt(date) {
 
 export default ({ app }, inject) => {
   const fetchPostItem = async function (ctx) {
-    const fetchPath = ctx.route.fullPath.replace('/', '');
+    const fetchPath = ctx.route.path.replace('/', '');
     const post = await app.store
       .$content(fetchPath)
       .fetch()
@@ -23,7 +23,6 @@ export default ({ app }, inject) => {
     post.createdAt = dateFmt(post.createdAt);
 
     app.store.commit('setPostItem', post);
-    console.log(post);
     return post;
   };
 
@@ -31,14 +30,18 @@ export default ({ app }, inject) => {
     const route = app.context.route;
 
     let query = '';
-
     if (route.query.query) {
       query = route.query.query;
     }
-    let fetchPath = path || route.fullPath;
-    // '/html/' => 'html'
-    fetchPath = fetchPath.replace('/', '');
-    fetchPath = fetchPath.replace('/', '');
+
+    let fetchPath = path || route.path;
+    fetchPath = fetchPath.split('/')[1];
+
+    let tag = '';
+    if (route.query.t) {
+      tag = route.query.t;
+      fetchPath = '';
+    }
 
     let list = await app.store
       .$content(fetchPath, { deep: true })
@@ -58,6 +61,9 @@ export default ({ app }, inject) => {
     if (limit > 0) {
       list = list.limit(limit);
     }
+    if (tag) {
+      list.where({ tags: { $contains: tag } });
+    }
 
     try {
       list = await list.fetch();
@@ -67,8 +73,8 @@ export default ({ app }, inject) => {
           p.createdAt = dateFmt(p.createdAt);
         }
       }
-      console.log(list);
       app.store.commit('setPostList', list);
+      console.log('List 결과', list);
       return list;
     } catch (e) {
       console.error('fetchPostList', e);
@@ -77,11 +83,8 @@ export default ({ app }, inject) => {
 
   const getTotalPostList = async function (path, saveStore = true) {
     const route = app.context.route;
-    let fetchPath = path || route.fullPath;
-
-    // '/html/' => 'html'
-    fetchPath = fetchPath.replace('/', '');
-    fetchPath = fetchPath.replace('/', '');
+    let fetchPath = path || route.path;
+    fetchPath = fetchPath.split('/')[1];
 
     try {
       const res = await app.store
@@ -98,7 +101,35 @@ export default ({ app }, inject) => {
     }
   };
 
+  const getTags = async function (path) {
+    const route = app.context.route;
+    let fetchPath = path || route.path;
+    fetchPath = fetchPath.split('/')[1];
+
+    try {
+      const res = await app.store
+        .$content(fetchPath, { deep: true })
+        .only(['tags'])
+        .fetch();
+
+      const tags = {};
+      for (const r of res) {
+        if (r.tags) {
+          for (const tag of r.tags) {
+            tags[tag] = 1 + (tags[tag] || 0);
+          }
+        }
+      }
+
+      return tags;
+    } catch (e) {
+      console.error('getTotalPostList', e);
+      return [];
+    }
+  };
+
   inject('fetchPostItem', fetchPostItem);
   inject('fetchPostList', fetchPostList);
   inject('getTotalPostList', getTotalPostList);
+  inject('getTags', getTags);
 };

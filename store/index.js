@@ -28,6 +28,9 @@ export const mutations = {
       if (route.path === '/*') {
         continue;
       }
+      if (!route.name) {
+        continue;
+      }
 
       if (route.path.split('/').length <= 2) {
         const length = await this.$getTotalPostList(route.path, false);

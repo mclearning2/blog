@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     search(e) {
-      const path = this.$route.fullPath;
+      const path = this.$route.path;
       if (path.split('/').length <= 2) {
         this.$store.app.context.route.query.query = e.target.value;
         // Total도 실행

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="false" class="site-ad">
+  <div class="site-ad">
     <ins
       class="adsbygoogle"
       style="display: block"
@@ -19,13 +19,13 @@ export default {
     },
   },
   mounted() {
-    // this.$nextTick(() => {
-    //   try {
-    //     (window.adsbygoogle = window.adsbygoogle || []).push({});
-    //   } catch (error) {
-    //     console.error('Adsbygoogle error is ', error);
-    //   }
-    // });
+    this.$nextTick(() => {
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (error) {
+        console.error('Adsbygoogle error is ', error);
+      }
+    });
   },
 };
 </script>

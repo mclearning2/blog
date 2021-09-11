@@ -1,5 +1,7 @@
 <template>
   <aside class="site-sidebar">
+    <!-- Tag Cloud -->
+    <common-tag-cloud></common-tag-cloud>
     <div class="site-sidebar__sticky">
       <!-- TOC -->
       <common-toc

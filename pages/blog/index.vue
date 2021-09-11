@@ -1,10 +1,10 @@
 <template>
   <section class="post-list">
-    <h2 class="post-list__title">{{ $route.name }}</h2>
+    <h2 class="post-list__title">{{ postListTitle() }}</h2>
     <ul class="post-list__items">
       <li v-for="p of $store.state.postList" :key="p.slug" class="post-item">
         <h3 class="post-item__category">
-          <a :href="p.dir">
+          <a :href="getDir(p.dir)">
             {{ category(p.dir) }}
           </a>
         </h3>
@@ -60,7 +60,7 @@ export default {
   watch: {
     pageIdx(idx) {
       this.$fetchPostList(idx, this.postPerPage);
-      this.$getTotalPostList(this.$route.fullPath);
+      this.$getTotalPostList(this.$route.path);
       this.scrollToPostTitle();
     },
   },
@@ -77,6 +77,11 @@ export default {
     },
     category(path) {
       return this.$store.state.routePathName['/' + this.getDir(path)];
+    },
+    postListTitle() {
+      console.log(this.$route);
+
+      return this.$route.name;
     },
   },
 };
