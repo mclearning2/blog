@@ -74,7 +74,6 @@ export default ({ app }, inject) => {
         }
       }
       app.store.commit('setPostList', list);
-      console.log('List 결과', list);
       return list;
     } catch (e) {
       console.error('fetchPostList', e);

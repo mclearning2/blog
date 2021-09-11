@@ -79,9 +79,11 @@ export default {
       return this.$store.state.routePathName['/' + this.getDir(path)];
     },
     postListTitle() {
-      console.log(this.$route);
-
-      return this.$route.name;
+      if (this.$route.query.t) {
+        return '태그 검색: #' + this.$route.query.t;
+      } else {
+        return this.$route.name;
+      }
     },
   },
 };
