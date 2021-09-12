@@ -1,7 +1,8 @@
 ---
 title: vue에서 d3 word cloud를 이용한 태그 클라우드 컴포넌트 만들기
 tags:
-    - library
+  - D3
+  - Word Cloud
 image: /images/nuxt-d3-word-cloud/210911-134138.png
 ---
 

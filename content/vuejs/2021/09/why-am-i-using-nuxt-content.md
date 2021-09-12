@@ -1,8 +1,7 @@
 ---
 title: 내가 nuxt content를 쓰는 이유
 tags:
-    - nuxt
-    - blog
+    - Nuxt Content
 image: /images/why-am-i-using-nuxt-content/210909-123721.png
 createdAt: 2021-09-09
 ---

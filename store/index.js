@@ -52,9 +52,6 @@ export const mutations = {
   setPostItem(state, post) {
     state.post = post;
   },
-  setLoading(state, loading) {
-    state.loading = loading;
-  },
   toggleMobileMenu(state) {
     state.activeMobileMenu = !state.activeMobileMenu;
   },
