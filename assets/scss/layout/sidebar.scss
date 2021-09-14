@@ -1,8 +1,6 @@
 .site-sidebar {
   display: flex;
   flex-direction: column;
-  padding-left: 2rem;
-  border-left: 1px solid $color2;
 
   &__sticky {
     position: sticky;
