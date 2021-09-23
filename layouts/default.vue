@@ -30,6 +30,10 @@ export default {
   },
   mounted() {
     this.$activeGTag();
+    for (const a of document.querySelectorAll('.adsbygoogle')) {
+      console.log(a);
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    }
   },
 };
 </script>

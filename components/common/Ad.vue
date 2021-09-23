@@ -19,11 +19,11 @@ export default {
     },
   },
   mounted() {
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (error) {
-      console.error('Adsbygoogle error is ', error);
-    }
+
+    // try {
+    // } catch (error) {
+    //   console.error('Adsbygoogle error is ', error);
+    // }
   },
 };
 </script>
