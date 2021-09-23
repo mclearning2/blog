@@ -1,7 +1,6 @@
 <template>
   <div class="site-hero">
-    <!-- <common-ad v-if="postList.length > 0"></common-ad> -->
-    <common-ad v-if="false"></common-ad>
+    <common-ad v-if="postList.length > 0" class="site-hero__ad"></common-ad>
 
     <!-- Header -->
     <header v-else-if="'title' in post" class="post-hero">
