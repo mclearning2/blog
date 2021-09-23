@@ -28,12 +28,5 @@ export default {
     this.$store.commit('setRoutePathName', this.$router.options.routes);
     this.$store.commit('setDockItems', this.$router.options.routes);
   },
-  mounted() {
-    this.$activeGTag();
-    for (const a of document.querySelectorAll('.adsbygoogle[data-ad-client]')) {
-      console.log(a);
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    }
-  },
 };
 </script>

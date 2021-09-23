@@ -19,5 +19,12 @@ export default {
       default: 'auto',
     },
   },
+  mounted() {
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (error) {
+      console.error('Adsbygoogle error is ', error);
+    }
+  },
 };
 </script>

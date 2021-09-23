@@ -8,7 +8,7 @@ export const state = () => ({
   post: {},
   postList: [],
   totalPostList: 0,
-  postPerPage: 6,
+  postPerPage: 8,
 
   activeMobileMenu: false,
 });
