@@ -19,13 +19,11 @@ export default {
     },
   },
   mounted() {
-    this.$nextTick(() => {
-      try {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      } catch (error) {
-        console.error('Adsbygoogle error is ', error);
-      }
-    });
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (error) {
+      console.error('Adsbygoogle error is ', error);
+    }
   },
 };
 </script>
