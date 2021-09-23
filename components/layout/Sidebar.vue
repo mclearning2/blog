@@ -10,7 +10,7 @@
       ></common-toc>
 
       <!-- AD -->
-      <common-ad class="site-sidebar__ad"></common-ad>
+      <!-- <common-ad class="site-sidebar__ad"></common-ad> -->
     </div>
   </aside>
 </template>

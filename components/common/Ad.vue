@@ -9,14 +9,3 @@
     ></ins>
   </div>
 </template>
-
-<script>
-export default {
-  // mounted() {
-  //   try {
-  //   } catch (error) {
-  //     console.error('Adsbygoogle error is ', error);
-  //   }
-  // },
-};
-</script>
