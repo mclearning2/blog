@@ -10,7 +10,11 @@
       ></common-toc>
 
       <!-- AD -->
-      <common-ad format="vertical" class="site-sidebar__ad"></common-ad>
+      <common-ad
+        v-if="$store.state.post.title"
+        format="vertical"
+        class="site-sidebar__ad"
+      ></common-ad>
     </div>
   </aside>
 </template>

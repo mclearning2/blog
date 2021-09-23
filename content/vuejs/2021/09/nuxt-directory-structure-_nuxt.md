@@ -1,8 +1,8 @@
 ---
-title: Nuxt 폴더 구조 정리 - assets 편
+title: Nuxt 폴더 구조 정리 - .nuxt 편
 ---
 
-NuxtJS에서 사용되는 폴더 구조 중 `assets`에 대해 다뤄보겠다.
+NuxtJS에서 사용되는 폴더 구조 중 `.nuxt`에 대해 다뤄보겠다.
 
 <!--more-->
 
@@ -20,8 +20,8 @@ NuxtJS에서 사용되는 폴더 구조 중 `assets`에 대해 다뤄보겠다.
 
 ```js [nuxt.config.js]
 export default {
-    buildDir: 'nuxt-dist'
-}
+  buildDir: 'nuxt-dist',
+};
 ```
 
 ## 폴더 내부
@@ -69,26 +69,80 @@ NuxtLink, NuxtChild 등 모든 Nuxt 컴포넌트들이 들어 있다. build 화�
 ```html [error.html]
 <!DOCTYPE html>
 <html>
-<head>
-<title>Server error</title>
-<meta charset="utf-8">
-<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name=viewport>
-<style>
-.__nuxt-error-page{padding: 1rem;background:#f7f8fb;color:#47494e;text-align:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-family:sans-serif;font-weight:100!important;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;position:absolute;top:0;left:0;right:0;bottom:0}.__nuxt-error-page .error{max-width:450px}.__nuxt-error-page .title{font-size:24px;font-size:1.5rem;margin-top:15px;color:#47494e;margin-bottom:8px}.__nuxt-error-page .description{color:#7f828b;line-height:21px;margin-bottom:10px}.__nuxt-error-page a{color:#7f828b!important;text-decoration:none}.__nuxt-error-page .logo{position:fixed;left:12px;bottom:12px}
-</style>
-</head>
-<body>
-  <div class="__nuxt-error-page">
-    <div class="error">
-
+  <head>
+    <title>Server error</title>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport"
+    />
+    <style>
+      .__nuxt-error-page {
+        padding: 1rem;
+        background: #f7f8fb;
+        color: #47494e;
+        text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        font-family: sans-serif;
+        font-weight: 100 !important;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .__nuxt-error-page .error {
+        max-width: 450px;
+      }
+      .__nuxt-error-page .title {
+        font-size: 24px;
+        font-size: 1.5rem;
+        margin-top: 15px;
+        color: #47494e;
+        margin-bottom: 8px;
+      }
+      .__nuxt-error-page .description {
+        color: #7f828b;
+        line-height: 21px;
+        margin-bottom: 10px;
+      }
+      .__nuxt-error-page a {
+        color: #7f828b !important;
+        text-decoration: none;
+      }
+      .__nuxt-error-page .logo {
+        position: fixed;
+        left: 12px;
+        bottom: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="__nuxt-error-page">
+      <div class="error">
         <div class="title">Server error</div>
         <div class="description">{{ message }}</div>
+      </div>
+      <div class="logo">
+        <a href="https://nuxtjs.org" target="_blank" rel="noopener">Nuxt</a>
+      </div>
     </div>
-    <div class="logo">
-      <a href="https://nuxtjs.org" target="_blank" rel="noopener">Nuxt</a>
-    </div>
-  </div>
-</body>
+  </body>
 </html>
 ```
 
@@ -127,7 +181,6 @@ Vue를 실행할 수 있게 해주는 root javascript 파일이다. `App.js`, `v
 ### middleware.js
 
 middleware와 관련된 파일
-
 
 ### 그 외
 
