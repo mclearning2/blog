@@ -108,11 +108,11 @@ export default {
         async: true,
         src: 'https://www.googletagmanager.com/gtag/js?id=G-VNY2TDSXKE',
       },
-      {
-        defer: true,
-        hid: 'adsense',
-        src: '/adsense.js',
-      },
+      // {
+      //   defer: true,
+      //   hid: 'adsense',
+      //   src: '/adsense.js',
+      // },
     ],
   },
 

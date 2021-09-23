@@ -1,7 +1,7 @@
 <template>
   <footer class="site-footer">
     <div class="site-footer__ad">
-      <common-ad :ad-slot="'8640324302'"></common-ad>
+      <common-ad></common-ad>
     </div>
     <div class="blog-info">
       <p class="blog-info__copy-right">

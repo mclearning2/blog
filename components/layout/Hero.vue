@@ -1,6 +1,6 @@
 <template>
   <div class="site-hero">
-    <common-ad v-if="postList.length > 0" :ad-slot="'4908962850'"></common-ad>
+    <common-ad v-if="postList.length > 0"></common-ad>
 
     <!-- Header -->
     <header v-else-if="'title' in post" class="post-hero">

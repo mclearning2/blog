@@ -4,7 +4,7 @@
       class="adsbygoogle"
       style="display: block"
       data-ad-client="ca-pub-2649674681017228"
-      :data-ad-slot="adSlot"
+      data-ad-slot="4908962850"
       data-full-width-responsive="true"
     ></ins>
   </div>
@@ -12,18 +12,11 @@
 
 <script>
 export default {
-  props: {
-    adSlot: {
-      type: String,
-      require: true,
-    },
-  },
-  mounted() {
-
-    // try {
-    // } catch (error) {
-    //   console.error('Adsbygoogle error is ', error);
-    // }
-  },
+  // mounted() {
+  //   try {
+  //   } catch (error) {
+  //     console.error('Adsbygoogle error is ', error);
+  //   }
+  // },
 };
 </script>
