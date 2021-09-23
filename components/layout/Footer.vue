@@ -1,7 +1,7 @@
 <template>
   <footer class="site-footer">
     <div class="site-footer__ad">
-      <common-ad></common-ad>
+      <common-ad :format="'horizontal'"></common-ad>
     </div>
     <div class="blog-info">
       <p class="blog-info__copy-right">
