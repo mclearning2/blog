@@ -8,11 +8,7 @@
         class="toc-item"
         :class="{ active: t.id === activeId }"
       >
-        <span
-          v-if="t.depth == 2"
-          class="toc-text"
-          @click="clickTocItem('#' + t.id)"
-        >
+        <span v-if="t.depth == 2" class="toc-text" @click="clickTocItem(t.id)">
           {{ t.text }}
         </span>
         <ul v-if="t.children.length > 0" class="toc-sub-list">
@@ -22,7 +18,7 @@
             class="toc-sub-item"
             :class="{ active: sub.id === activeId }"
           >
-            <span class="toc-text" @click="clickTocItem('#' + sub.id)">
+            <span class="toc-text" @click="clickTocItem(sub.id)">
               {{ sub.text }}
             </span>
           </li>
@@ -73,7 +69,7 @@ export default {
   },
   methods: {
     clickTocItem(elId) {
-      const offsetTop = document.querySelector(elId).offsetTop;
+      const offsetTop = document.getElementById(elId).offsetTop;
       scroll({
         top: offsetTop,
         behavior: 'smooth',
@@ -82,7 +78,7 @@ export default {
     scrollHandler() {
       for (const t of this.$store.state.post.toc) {
         const elScrollY = document
-          .querySelector('#' + t.id)
+          .getElementById(t.id)
           .getBoundingClientRect().top;
         if (elScrollY <= 10) {
           this.activeId = t.id;
