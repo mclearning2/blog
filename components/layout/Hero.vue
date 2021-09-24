@@ -9,7 +9,7 @@
     <!-- Header -->
     <header v-else-if="'title' in post" class="post-hero">
       <h3 class="post-hero__category">
-        <a :href="getDir(post.dir)">
+        <a :href="'/' + getDir(post.dir)">
           {{ category(post.dir) }}
         </a>
       </h3>
