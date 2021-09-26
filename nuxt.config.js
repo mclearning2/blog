@@ -129,7 +129,7 @@ export default {
   ],
   moment: {
     timezone: true,
-    efaultTimezone: 'Asia/Seoul',
+    defaultTimezone: 'Asia/Seoul',
   },
 
   styleResources: {
