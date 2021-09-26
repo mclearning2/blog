@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="background-img">
-      <img src="~/assets/images/common/bg.jpeg" alt="" />
+      <img src="~/assets/images/common/bg.png" alt="" />
       <div class="linear-grad"></div>
     </div>
 

@@ -24,7 +24,7 @@ export default {
     for (const tag in tags) {
       this.words.push({
         text: tag,
-        size: Math.min((tags[tag] / maxVal) * 50, 50),
+        size: Math.min((tags[tag] / maxVal) * 40, 20),
       });
     }
     this.isTagEmpty = this.words.length <= 0;

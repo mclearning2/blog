@@ -1,7 +1,7 @@
 ---
 title: NuxtJS 블로그 강의 2 - Routing
 tags:
-    - Nuxt Lecture
+    - Nuxt Blog Lecture
 image: /images/nuxt-basic-1/210912-031150.png
 ---
 

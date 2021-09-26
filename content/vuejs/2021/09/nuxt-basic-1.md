@@ -1,7 +1,7 @@
 ---
 title: NuxtJS 블로그 강의 1 - 프로젝트 만들기
 tags:
-    - Nuxt Lecture
+  - Nuxt Blog Lecture
 image: /images/nuxt-basic-1/210912-031150.png
 ---
 
