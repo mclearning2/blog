@@ -125,12 +125,7 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxtjs/style-resources',
-    '@nuxtjs/moment',
   ],
-  moment: {
-    timezone: true,
-    defaultTimezone: 'Asia/Seoul',
-  },
 
   styleResources: {
     scss: ['~/assets/scss/abstract/*.scss'],

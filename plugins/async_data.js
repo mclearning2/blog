@@ -2,7 +2,7 @@ function dateFmt(date) {
   if (date) {
     const d = new Date(date);
     const year = d.getFullYear();
-    const month = ('0' + d.getMonth()).slice(-2);
+    const month = ('0' + (d.getMonth() + 1)).slice(-2);
     const day = ('0' + d.getDate()).slice(-2);
     return `${year}-${month}-${day}`;
   } else {
@@ -68,13 +68,21 @@ export default ({ app }, inject) => {
     try {
       list = await list.fetch();
 
+      const listWODraft = [];
       for (const p of list) {
         if (p.createdAt) {
           p.createdAt = dateFmt(p.createdAt);
         }
+
+        if (p.dir.includes('draft')) {
+          continue;
+        }
+
+        listWODraft.push(p);
       }
-      app.store.commit('setPostList', list);
-      return list;
+
+      app.store.commit('setPostList', listWODraft);
+      return listWODraft;
     } catch (e) {
       console.error('fetchPostList', e);
     }
