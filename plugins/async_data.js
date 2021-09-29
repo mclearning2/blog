@@ -74,10 +74,6 @@ export default ({ app }, inject) => {
           p.createdAt = dateFmt(p.createdAt);
         }
 
-        if (p.dir.includes('draft')) {
-          continue;
-        }
-
         listWODraft.push(p);
       }
 

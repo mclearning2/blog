@@ -3,6 +3,7 @@ title: NuxtJS 블로그 강의 1 - 프로젝트 만들기
 tags:
   - Nuxt Blog Lecture
 image: /images/nuxt-basic-1/210912-031150.png
+createdAt: 2021-09-25
 ---
 
 이 강의는 NuxtJS를 통해 자신의 사이트, 정확히는 블로그를 만들기 위한 사람들을 위한 글이다.

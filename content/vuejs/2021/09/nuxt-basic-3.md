@@ -3,6 +3,7 @@ title: NuxtJS 블로그 강의 3 - 포스팅 작성하기
 tags:
   - Nuxt Blog Lecture
 image: /images/nuxt-basic-1/210912-031150.png
+createdAt: 2021-09-27
 ---
 
 지난 시간까지는 페이지를 서로 연결하는 방법에 대해 배워보았습니다. 이제 내용을 채워보아야겠죠?

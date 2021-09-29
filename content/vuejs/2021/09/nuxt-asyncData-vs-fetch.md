@@ -1,5 +1,6 @@
 ---
 title: NuxtJS fetch 와 asyncData 차이
+createdAt: 2021-09-20
 ---
 
 Nuxt에서 페이지가 마운트 되기 전에 API를 호출하여 데이터를 가져오는 두 가지 방법에 대해 알아보겠습니다.

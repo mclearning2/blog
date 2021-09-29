@@ -3,6 +3,7 @@ title: Nuxt에서 ads.txt 추가하는 방법
 image: /images/add-ads-txt-in-nuxt/210923-183129.png
 tags:
   - adsense
+createdAt: 2021-09-24
 ---
 
 Google Adsense를 사용하는데 ads.txt를 추가하지 않으면 손실이 발생할 수 있다는 무서운 경고를 받았다.

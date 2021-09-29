@@ -3,6 +3,7 @@ title: NuxtJS 블로그 강의 2 - Routing
 tags:
     - Nuxt Blog Lecture
 image: /images/nuxt-basic-1/210912-031150.png
+createdAt: 2021-09-26
 ---
 
 이번 시간에는 페이지를 만들고 원하는 페이지로 이동하도록 라우팅(Routing)하는 시간을 가져보겠다.

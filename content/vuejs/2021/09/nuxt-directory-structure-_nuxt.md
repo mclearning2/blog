@@ -1,5 +1,6 @@
 ---
 title: Nuxt 폴더 구조 정리 - .nuxt 편
+createdAt: 2021-09-10
 ---
 
 NuxtJS에서 사용되는 폴더 구조 중 `.nuxt`에 대해 다뤄보겠다.

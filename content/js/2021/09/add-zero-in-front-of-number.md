@@ -2,6 +2,7 @@
 title: Javscript 숫자 앞에 0 붙이기
 tags:
   - Javascript
+createdAt: 2021-09-23
 ---
 
 달력을 표시할 때나 숫자들의 표시 나열일 일관성있게 하기 위해 앞에 0을 붙인다. 그에 대한 방법을 알아본다.

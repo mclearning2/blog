@@ -3,6 +3,7 @@ title: 사파리에서 svg 흐려보이는 현상 해결
 tags:
   - SVG
 image: /images/svg-blurry-safari/210923-170443.png
+createdAt: 2021-09-22
 ---
 
 SVG 이미지를 띄우다 보면 분명 흐릴 이유가 없는데 사이트에서는 흐려져 보이는 문제가 있다. 이 문제를 겪으면서 찾아본 방법들을 정리해본다.
