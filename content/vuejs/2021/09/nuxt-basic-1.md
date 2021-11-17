@@ -20,31 +20,27 @@ NuxtJS를 사용함에 따라 기본적으로 다음 기술에 대한 최소한�
 - `SCSS(CSS)`
 - `Javascript`
 
-또한 자바스크립트 패키지 다운로드는 `npm(v7.21.0)`을 사용할 예정이다.(Node.js는 `v14.16.1`) NuxtJS를 해보고자 한다는 것은 이미 VueJS를 사용해보았고 그에 따라 어느 정도 자신만의 환경이 있다고 생각하고 바로 본격적인 내용에 들어가겠다.
+그리고 NuxtJS에 집중하기 위해 VSCode나 Webstorm 등 환경 설정은 설명에서 제외할 것이다.
 
 ## Installation
 
 설치는 `npm`을 사용하는 방법과 `npx`를 사용하는 방법이 있다. (`npx`는 npm 5.2.0 버전 이후 부터는 기본적으로 들어있다.)
 
-- npm
-
-```shell
+```bash [npm]
 npm init nuxt-app <project-name>
 ```
 
-- npx
-
-```shell
+```bash [npx]
 npx create-nuxt-app <project-name>
 ```
 
-`blog`라는 이름으로 project-name을 사용. 다음을 따라 선택. 중간에 선택해야하는 부분은 spacebar로 선택할 수 있다.
+project-name은 블로그를 만들기 위한 프로젝트이기 때문에 `blog`라고 할 것이다. 중간에 체크해야하는 부분은 Spacebar로, 선택하고 넘어가려면 Enter를 하면 된다. 그리고 다음과 같이 선택하면 된다.
 
 ```bash
 create-nuxt-app v3.7.1
 ✨  Generating Nuxt.js project in blog
-? Project name: blog
 ? Programming language: JavaScript
+? Project name: blog
 ? Package manager: Npm
 ? UI framework: None
 ? Nuxt.js modules: Content - Git-based headless CMS
@@ -65,7 +61,7 @@ create-nuxt-app v3.7.1
 
 해당 프로젝트에 들어가서 다음 명령어를 실행하면 http://localhost:3000 에 접속할 수 있다.
 
-```shell
+```bash
 npm run dev
 ```
 
